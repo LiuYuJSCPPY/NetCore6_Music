@@ -1,0 +1,1 @@
+E:\0_MyDocument\Visual_Studio_2022\Projects\NetCore6_Music\ChatApp\ChatApp\ChatApp.csproj;x64

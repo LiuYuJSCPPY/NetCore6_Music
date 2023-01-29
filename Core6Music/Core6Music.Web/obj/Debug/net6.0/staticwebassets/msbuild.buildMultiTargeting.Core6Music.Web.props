@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Core6Music.Web.props" />
+</Project>

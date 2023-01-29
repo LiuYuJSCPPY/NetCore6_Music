@@ -1,0 +1,63 @@
+﻿@model Core6Music.Web.Areas.Dashboard.ViewModels.DetailArtistVIewModels
+
+@{
+    ViewData["Title"] = "Details";
+    var BackImagePATH = "~/Image/Artist/BackImage/";
+    var ContextImagePATH = "~/Image/Artist/ContextImage/";
+    var HeadImagePATH = "~/Image/Artist/HeadImage/";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Artist</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Context)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Context)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FaceBook)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FaceBook)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Instagram)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Instagram)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Twitter)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Twitter)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Wikipedia)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Wikipedia)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BackImageName)
+        </dt>
+        <dd class="col-sm-10">
+            <img src=@(BackImagePATH + Model.BackImageName) asp-append-version="true"></img>
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

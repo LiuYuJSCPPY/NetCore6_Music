@@ -1,0 +1,353 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Core6Music.Web.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Core6Music.Web.bundle.scp.css"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Album\\5b99aea9-d155-4274-be67-a7de3b586160-dea2a4a2b3245617fe393c3f2dac9bc1.jpg",
+      "PackagePath": "staticwebassets\\Image\\Album\\5b99aea9-d155-4274-be67-a7de3b586160-dea2a4a2b3245617fe393c3f2dac9bc1.jpg"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\02d94ba6-85cf-4927-ab86-1d0824cdb162-23242834OIP (1).jfif",
+      "PackagePath": "staticwebassets\\Image\\Artist\\BackImage\\02d94ba6-85cf-4927-ab86-1d0824cdb162-23242834OIP (1).jfif"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\24445b95-7354-4b26-a7c3-6dc5cefec5d3-23442825OIP (1).jfif",
+      "PackagePath": "staticwebassets\\Image\\Artist\\BackImage\\24445b95-7354-4b26-a7c3-6dc5cefec5d3-23442825OIP (1).jfif"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\2d00dfaa-8662-48bb-8951-879b23575368-23032918dea2a4a2b3245617fe393c3f2dac9bc1.jpg",
+      "PackagePath": "staticwebassets\\Image\\Artist\\BackImage\\2d00dfaa-8662-48bb-8951-879b23575368-23032918dea2a4a2b3245617fe393c3f2dac9bc1.jpg"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\572e4c2d-b9ff-46a8-99d5-85cc441334cd-23202827OIP.jfif",
+      "PackagePath": "staticwebassets\\Image\\Artist\\BackImage\\572e4c2d-b9ff-46a8-99d5-85cc441334cd-23202827OIP.jfif"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\73a3feee-ff38-4bf8-a54c-3d8ef0de4b27-23282859OIP (1).jfif",
+      "PackagePath": "staticwebassets\\Image\\Artist\\BackImage\\73a3feee-ff38-4bf8-a54c-3d8ef0de4b27-23282859OIP (1).jfif"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\78740121-dfae-4447-bfbe-81c5f6b27276-23282832OIP (1).jfif",
+      "PackagePath": "staticwebassets\\Image\\Artist\\BackImage\\78740121-dfae-4447-bfbe-81c5f6b27276-23282832OIP (1).jfif"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\9d7f668d-e9ac-47a7-aba3-719aedfd437f-23372902OIP (1).jfif",
+      "PackagePath": "staticwebassets\\Image\\Artist\\BackImage\\9d7f668d-e9ac-47a7-aba3-719aedfd437f-23372902OIP (1).jfif"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\be1c95de-b7ba-41b6-a3a7-c76202ed8ee1-23462801dea2a4a2b3245617fe393c3f2dac9bc1.jpg",
+      "PackagePath": "staticwebassets\\Image\\Artist\\BackImage\\be1c95de-b7ba-41b6-a3a7-c76202ed8ee1-23462801dea2a4a2b3245617fe393c3f2dac9bc1.jpg"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\d5b0674d-51b5-40b2-a949-1ce25cbf7433-23312822OIP.jfif",
+      "PackagePath": "staticwebassets\\Image\\Artist\\BackImage\\d5b0674d-51b5-40b2-a949-1ce25cbf7433-23312822OIP.jfif"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\ContextImage\\3075add1-5a17-4445-b196-331c1aaccf0b-23442835OIP.jfif",
+      "PackagePath": "staticwebassets\\Image\\Artist\\ContextImage\\3075add1-5a17-4445-b196-331c1aaccf0b-23442835OIP.jfif"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\ContextImage\\46b63058-b333-4541-959c-460290654e1b-23382830OIP (1).jfif",
+      "PackagePath": "staticwebassets\\Image\\Artist\\ContextImage\\46b63058-b333-4541-959c-460290654e1b-23382830OIP (1).jfif"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\ContextImage\\5731260a-d9d4-41bf-a6ea-2bc74bef306a-23282859OIP.jfif",
+      "PackagePath": "staticwebassets\\Image\\Artist\\ContextImage\\5731260a-d9d4-41bf-a6ea-2bc74bef306a-23282859OIP.jfif"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\ContextImage\\5faf0639-a89f-45f6-858c-d95f004202f9-23312847OIP.jfif",
+      "PackagePath": "staticwebassets\\Image\\Artist\\ContextImage\\5faf0639-a89f-45f6-858c-d95f004202f9-23312847OIP.jfif"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\ContextImage\\98c204db-b816-4781-90fe-e91efb1f2def-23202831OIP.jfif",
+      "PackagePath": "staticwebassets\\Image\\Artist\\ContextImage\\98c204db-b816-4781-90fe-e91efb1f2def-23202831OIP.jfif"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\ContextImage\\aea65270-28f7-4dba-8523-9166a65c3b3b-23242834OIP.jfif",
+      "PackagePath": "staticwebassets\\Image\\Artist\\ContextImage\\aea65270-28f7-4dba-8523-9166a65c3b3b-23242834OIP.jfif"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\HeadImage\\058cb724-b43b-4a2b-b89e-362ec7740daa-23042851ArtistHeadImage",
+      "PackagePath": "staticwebassets\\Image\\Artist\\HeadImage"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\HeadImage\\06789a70-1176-4493-814e-ea9a0ec4f20d-23312855OIP.jfif",
+      "PackagePath": "staticwebassets\\Image\\Artist\\HeadImage\\06789a70-1176-4493-814e-ea9a0ec4f20d-23312855OIP.jfif"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\HeadImage\\4b640e20-456d-4a94-ba3c-3732d254eee2-23442836OIP (1).jfif",
+      "PackagePath": "staticwebassets\\Image\\Artist\\HeadImage\\4b640e20-456d-4a94-ba3c-3732d254eee2-23442836OIP (1).jfif"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\HeadImage\\8abcd158-1f8e-4582-aa99-eb896416f8aa-23202833OIP (1).jfif",
+      "PackagePath": "staticwebassets\\Image\\Artist\\HeadImage\\8abcd158-1f8e-4582-aa99-eb896416f8aa-23202833OIP (1).jfif"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\HeadImage\\cec0de37-88e3-4ee7-ab34-cd32d2fa6ac3-23282859OIP (1).jfif",
+      "PackagePath": "staticwebassets\\Image\\Artist\\HeadImage\\cec0de37-88e3-4ee7-ab34-cd32d2fa6ac3-23282859OIP (1).jfif"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\HeadImage\\decdc512-140a-4c0c-a1de-03d04b646ae7-23382832OIP.jfif",
+      "PackagePath": "staticwebassets\\Image\\Artist\\HeadImage\\decdc512-140a-4c0c-a1de-03d04b646ae7-23382832OIP.jfif"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Core6Music.Web.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Core6Music.Web.props",
+      "PackagePath": "build\\Core6Music.Web.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Core6Music.Web.props",
+      "PackagePath": "buildMultiTargeting\\Core6Music.Web.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Core6Music.Web.props",
+      "PackagePath": "buildTransitive\\Core6Music.Web.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
