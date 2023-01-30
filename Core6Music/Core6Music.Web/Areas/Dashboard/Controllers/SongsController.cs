@@ -8,6 +8,9 @@ using Microsoft.EntityFrameworkCore;
 using Core6Music.Web.DateContext;
 using Core6Music.Web.Models;
 using TagLib;
+using Core6Music.Web.Areas.Dashboard.ViewModels;
+using NToastNotify;
+
 
 namespace Core6Music.Web.Areas.Dashboard.Controllers
 {
@@ -16,11 +19,13 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
     {
         private readonly MusicDateContext _context;
         private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly IToastNotification _toastNotification;
 
-        public SongsController(MusicDateContext context, IWebHostEnvironment webHostEnvironment)
+        public SongsController(MusicDateContext context, IWebHostEnvironment webHostEnvironment, IToastNotification toastNotification)
         {
             _context = context;
             _webHostEnvironment = webHostEnvironment;
+            _toastNotification = toastNotification;
         }
 
         // GET: Dashboard/Songs
@@ -50,31 +55,29 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
         }
 
         // GET: Dashboard/Songs/Create
-        [Route("{AlbumId:string/Song/Create}")]
-        public IActionResult Create()
+
+        [HttpGet("Dashboard/{AdlumId}/Song/Create")]
+        public async Task<IActionResult> Create(string AdlumId)
         {
-            ViewData["AlbumId"] = new SelectList(_context.Albums, "Id", "Id");
-            return View();
+            Album song =await _context.Albums.FirstOrDefaultAsync(x => x.Id == AdlumId);
+            SongViewModel songViewModel = new SongViewModel()
+            {
+                album = song
+            };
+            return View(songViewModel);
         }
 
         // POST: Dashboard/Songs/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [Route("{AlbumId:string/Song/Create}")]
-        [HttpPost]
+       
+        [HttpPost("Dashboard/{AdlumId}/Song/Create")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(IFormFile Mp3File,string AlbumId)
+        public async Task<IActionResult> Create([Bind("Mp3File")]SongViewModel songViewModel,string AdlumId)
         {
-
-            var FileName = TagLib.File.Create(Mp3File.FileName);
-            string Artist = FileName.Tag.Artists.ToString();
-            string Name = FileName.Tag.Title;
-            TimeSpan Mp3Time = FileName.Properties.Duration;
-            if (FileName.Tag.Title == null && FileName.Tag.Artists == null) ;
-            {
-                return View("MP3 檔案創作者是空的");
-            }
-
+            Album song = await _context.Albums.FirstOrDefaultAsync(x => x.Id == AdlumId);
+            songViewModel.album = song;
+            IFormFile Mp3File = songViewModel.Mp3File;
             string Mp3Path = Path.Combine(_webHostEnvironment.WebRootPath, "MP3");
             if (!Directory.Exists(Mp3Path))
             {
@@ -89,26 +92,37 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
             }
 
 
+            var FileName = TagLib.File.Create(SaveMp3Path);
+            string[] Artist = FileName.Tag.Artists;
+            string Name = FileName.Tag.Title;
+            TimeSpan Mp3Time = FileName.Properties.Duration;
+            if (FileName.Tag.Title == null && FileName.Tag.Artists == null) 
+            {
+           
+                _toastNotification.AddErrorToastMessage("MP3 檔案創作者是空的");
+                return View(songViewModel);
+            }
+
             Song CreateSong = new Song()
             {
                 Name = Name,
-                AlbumId = AlbumId,
+                AlbumId = AdlumId,
                 SongTime = Mp3Time,
                 CreateDate = DateTime.Now,
-                ArtistName = Artist,
+                ArtistName = Artist.ToString(),
                 Mp3NameFile = Mp3File.FileName
             };
             
 
-                _context.Add(CreateSong);
+            _context.Add(CreateSong);
                 
-                await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
                
           
             return View(CreateSong);
         }
 
-        [Route("{AlbumId:string/Song/Edit/{id:int}}")]
+      
         // GET: Dashboard/Songs/Edit/5
         public async Task<IActionResult> Edit(int? id, string AlbumId)
         {
@@ -133,6 +147,7 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, IFormFile Mp3File, string AlbumId)
         {
+            Song song = await _context.Songs.FirstOrDefaultAsync(x => x.Id == id);
             if (id != song.Id)
             {
                 return NotFound();
@@ -162,8 +177,10 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
             return View(song);
         }
 
+
+        [HttpPost("Dashboard/{AdlumId}/Song/Delete/id")]
         // GET: Dashboard/Songs/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(int? id,string AdlumId)
         {
             if (id == null || _context.Songs == null)
             {
@@ -182,6 +199,7 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
         }
 
         // POST: Dashboard/Songs/Delete/5
+        [HttpPost("Dashboard/{AdlumId}/Song/Delete/id")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -190,7 +208,14 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
             {
                 return Problem("Entity set 'MusicDateContext.Songs'  is null.");
             }
+           
+            
             var song = await _context.Songs.FindAsync(id);
+            string DeletePath = Path.Combine(_webHostEnvironment.WebRootPath, "MP3",song.Mp3NameFile);
+            if (Directory.Exists(DeletePath))
+            {
+                Directory.Delete(DeletePath);
+            }
             if (song != null)
             {
                 _context.Songs.Remove(song);

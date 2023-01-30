@@ -16,6 +16,7 @@ namespace Core6Music.Web.Models
         public string ArtistName { get; set; }
         public string Mp3NameFile { get; set; }
 
+
         public ICollection<FavoriteSong> favoriteSongs { get; set; }
         public ICollection<SongArtist> songArtists { get; set; }
         public ICollection<MusicManifestSong> musicManifestSongs { get; set; }

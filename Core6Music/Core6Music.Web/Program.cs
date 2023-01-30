@@ -4,19 +4,29 @@ using Core6Music.Web.Interface;
 using Core6Music.Web.Repository;
 using Microsoft.AspNetCore.Identity;
 using Core6Music.Web.Models;
+using NToastNotify;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
+builder.Services.AddMvc().AddNToastNotifyToastr(new ToastrOptions()
+{
+    ProgressBar = false,
+    PositionClass = ToastPositions.BottomCenter
+});
+
+//Or simply go 
+builder.Services.AddMvc().AddNToastNotifyToastr();
+
 builder.Services.AddDbContext<MusicDateContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("MusicDateContext")));
 
-builder.Services.AddIdentity<MusicUser, IdentityRole>()
-     .AddEntityFrameworkStores<MusicDateContext>()
-     .AddDefaultTokenProviders();
+builder.Services.AddDefaultIdentity<MusicUser>(options => options.SignIn.RequireConfirmedAccount = true).AddRoles<IdentityRole>()
+    .AddEntityFrameworkStores<MusicDateContext>();
+
 
 builder.Services.AddScoped<IArtist, ArtistRepository>();
 builder.Services.AddScoped<IAlbum, AlbumRepository>();
-builder.Services.AddScoped<ISong, SongRepository>();
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -31,10 +41,13 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.UseNToastNotify();
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseAuthentication();;
 
 app.UseAuthorization();
 

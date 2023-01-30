@@ -1,6 +1,14 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\uiopl\\.nuget\\packages\\ntoastnotify\\8.0.0\\contentFiles\\any\\net6.0\\wwwroot\\noty.js",
+      "PackagePath": "staticwebassets\\noty.js"
+    },
+    {
+      "Id": "C:\\Users\\uiopl\\.nuget\\packages\\ntoastnotify\\8.0.0\\contentFiles\\any\\net6.0\\wwwroot\\toastr.js",
+      "PackagePath": "staticwebassets\\toastr.js"
+    },
+    {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Core6Music.Web.bundle.scp.css",
       "PackagePath": "staticwebassets\\Core6Music.Web.bundle.scp.css"
     },
@@ -23,6 +31,10 @@
     {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\572e4c2d-b9ff-46a8-99d5-85cc441334cd-23202827OIP.jfif",
       "PackagePath": "staticwebassets\\Image\\Artist\\BackImage\\572e4c2d-b9ff-46a8-99d5-85cc441334cd-23202827OIP.jfif"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\6787817c-acac-4bd2-8837-e98eb4eca62b-23443035131137.jpg",
+      "PackagePath": "staticwebassets\\Image\\Artist\\BackImage\\6787817c-acac-4bd2-8837-e98eb4eca62b-23443035131137.jpg"
     },
     {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\73a3feee-ff38-4bf8-a54c-3d8ef0de4b27-23282859OIP (1).jfif",
@@ -53,6 +65,10 @@
       "PackagePath": "staticwebassets\\Image\\Artist\\ContextImage\\46b63058-b333-4541-959c-460290654e1b-23382830OIP (1).jfif"
     },
     {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\ContextImage\\51a26f7b-c4cc-463f-af33-f75a28e2c2cf-23443039articleimage_1130631.jpg",
+      "PackagePath": "staticwebassets\\Image\\Artist\\ContextImage\\51a26f7b-c4cc-463f-af33-f75a28e2c2cf-23443039articleimage_1130631.jpg"
+    },
+    {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\ContextImage\\5731260a-d9d4-41bf-a6ea-2bc74bef306a-23282859OIP.jfif",
       "PackagePath": "staticwebassets\\Image\\Artist\\ContextImage\\5731260a-d9d4-41bf-a6ea-2bc74bef306a-23282859OIP.jfif"
     },
@@ -77,6 +93,10 @@
       "PackagePath": "staticwebassets\\Image\\Artist\\HeadImage\\06789a70-1176-4493-814e-ea9a0ec4f20d-23312855OIP.jfif"
     },
     {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\HeadImage\\3fb26df4-bc85-4441-927f-821f844b326c-23443051woman-7577808_1920.jpg",
+      "PackagePath": "staticwebassets\\Image\\Artist\\HeadImage\\3fb26df4-bc85-4441-927f-821f844b326c-23443051woman-7577808_1920.jpg"
+    },
+    {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\HeadImage\\4b640e20-456d-4a94-ba3c-3732d254eee2-23442836OIP (1).jfif",
       "PackagePath": "staticwebassets\\Image\\Artist\\HeadImage\\4b640e20-456d-4a94-ba3c-3732d254eee2-23442836OIP (1).jfif"
     },
@@ -91,6 +111,10 @@
     {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\HeadImage\\decdc512-140a-4c0c-a1de-03d04b646ae7-23382832OIP.jfif",
       "PackagePath": "staticwebassets\\Image\\Artist\\HeadImage\\decdc512-140a-4c0c-a1de-03d04b646ae7-23382832OIP.jfif"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\MP3\\scott-buckley-ashes-of-a-fallen-year.mp3",
+      "PackagePath": "staticwebassets\\MP3\\scott-buckley-ashes-of-a-fallen-year.mp3"
     },
     {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\css\\site.css",

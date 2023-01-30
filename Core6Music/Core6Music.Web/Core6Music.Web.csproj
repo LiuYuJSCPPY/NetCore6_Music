@@ -10,6 +10,7 @@
     <PackageReference Include="Hashids.net" Version="1.6.1" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.13" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.13">
       <PrivateAssets>all</PrivateAssets>
@@ -22,12 +23,14 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" />
     <PackageReference Include="NAudio" Version="2.1.0" />
+    <PackageReference Include="NToastNotify" Version="8.0.0" />
     <PackageReference Include="TagLibSharp" Version="2.3.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Areas\Dashboard\Data\" />
     <Folder Include="Areas\Dashboard\Models\" />
+    <Folder Include="wwwroot\MP3\" />
   </ItemGroup>
 
 </Project>

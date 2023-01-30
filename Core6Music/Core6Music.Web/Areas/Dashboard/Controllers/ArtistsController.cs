@@ -13,7 +13,7 @@ using HashidsNet;
 using System.Security.Policy;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
-
+using NToastNotify;
 
 namespace Core6Music.Web.Areas.Dashboard.Controllers
 {
@@ -23,12 +23,14 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
         private readonly MusicDateContext _context;
         private readonly IArtist _artist;
         private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly IToastNotification _toastNotification;
 
-        public ArtistsController(MusicDateContext context, IArtist artist, IWebHostEnvironment webHostEnvironment)
+        public ArtistsController(MusicDateContext context, IArtist artist, IWebHostEnvironment webHostEnvironment,IToastNotification toastNotification)
         {
             _context = context;
             _artist = artist;
             _webHostEnvironment = webHostEnvironment;
+            _toastNotification = toastNotification;
         }
 
         // GET: Dashboard/Artists
@@ -140,9 +142,11 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
             }
             if (Restult)
             {
+                _toastNotification.AddSuccessToastMessage("新增成功!");
                 return RedirectToAction(nameof(Index));
             }else
             {
+                _toastNotification.AddErrorToastMessage("新增失敗");
                 return View(createArtistsViewModel);
             }
           
