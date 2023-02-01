@@ -22,8 +22,8 @@ namespace Core6Music.Web.Models
         public virtual ICollection<Album> albums { get; set; }
         public virtual ICollection<Fan> fans { get; set; }
         public virtual ICollection<FavoriteArtist> favoriteArtists { get; set; }
-        public virtual ICollection<ArtistBackImage> artistBackImages { get; set; }
-        public virtual ICollection<ArtistContextImage> artistContextImages { get; set; }
-        public virtual ICollection<ArtistHeadImage> artistHeadImages { get; set; }
+        public virtual ArtistBackImage artistBackImages { get; set; }
+        public virtual ArtistContextImage artistContextImages { get; set; }
+        public virtual ArtistHeadImage artistHeadImages { get; set; }
     }
 }

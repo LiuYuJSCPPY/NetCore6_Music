@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Core6Music.Web.DateContext;
 using Core6Music.Web.Models;
 using Core6Music.Web.Interface;
 using Core6Music.Web.Areas.Dashboard.ViewModels;
 using HashidsNet;
-using System.Security.Policy;
+using NToastNotify;
 
 namespace Core6Music.Web.Areas.Dashboard.Controllers
 {
@@ -19,23 +14,28 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
     {
         private readonly MusicDateContext _context;
         private readonly IAlbum _album;
-        public AlbumsController(MusicDateContext context,IAlbum album)
+        private readonly IToastNotification _toastNotification;
+        public AlbumsController(MusicDateContext context,IAlbum album, IToastNotification toastNotification)
         {
             _context = context;
             _album = album;
+            _toastNotification = toastNotification;
         }
 
         // GET: Dashboard/Albums
-        public async Task<IActionResult> Index()
+        [HttpGet("Dashboard/{ArtistId}/Albums")]
+        public async Task<IActionResult> Index(string ArtistId)
         {
             AllAlbumViewModels allAlbumViewModels = new AllAlbumViewModels()
             {
-                AllAlbum = await _album.GetAllAlbum()
+                AllAlbum = await _album.GetAllAlbum(),
+                ArtistId = ArtistId
             };
             return View(allAlbumViewModels);
         }
 
         // GET: Dashboard/Albums/Details/5
+        [HttpGet("Dashboard/{ArtistId}/Albums/{id}")]
         public async Task<IActionResult> Details(string id)
         {
             if (id == null || _context.Albums == null)
@@ -53,24 +53,25 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
             return View(album);
         }
 
+        [HttpGet("Dashboard/{ArtistId}/Albums/Create")]
         // GET: Dashboard/Albums/Create
         public IActionResult Create()
         {
-            ViewData["ArtistId"] = new SelectList(_context.Artists, "Id", "Name");
+            
             return View();
         }
 
         // POST: Dashboard/Albums/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        [HttpPost("Dashboard/{ArtistId}/Albums/Create")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Name,ArtistId,albumCategory,Image")] CreateAlbumViewModels createAlbumViewModels)
+        public async Task<IActionResult> Create([Bind("Name,albumCategory,Image")] CreateAlbumViewModels createAlbumViewModels,string ArtistId)
         {
             if (ModelState.IsValid)
             {
                
-                var hash = new Hashids(createAlbumViewModels.Name + createAlbumViewModels.ArtistId, 22);
+                var hash = new Hashids(createAlbumViewModels.Name + ArtistId, 22);
                 var hashId = hash.Encode(1);
               
 
@@ -78,22 +79,24 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
                 {
                     Id = hashId,
                     Name = createAlbumViewModels.Name,
-                    ArtistId = createAlbumViewModels.ArtistId,
+                    ArtistId = ArtistId,
                     albumCategory = createAlbumViewModels.albumCategory,
                     Image = _album.SaveImage(createAlbumViewModels.Image)
                 };
                 if (_album.CreateAlbum(album))
                 {
-                    return RedirectToAction(nameof(Index));
+                    _toastNotification.AddSuccessToastMessage("儲存成功!");
+                    return RedirectToAction(nameof(Index), new { ArtistId = ArtistId });
                 }
                 
             }
-            ViewData["ArtistId"] = new SelectList(_context.Artists, "Id", "Id", createAlbumViewModels.ArtistId);
+          
             return View(createAlbumViewModels);
         }
 
+        [HttpGet("Dashboard/{ArtistId}/Albums/Edit/{id}")]
         // GET: Dashboard/Albums/Edit/5
-        public async Task<IActionResult> Edit(string id)
+        public async Task<IActionResult> Edit(string id,string ArtistId)
         {
             if (id == null || _context.Albums == null)
             {
@@ -105,7 +108,7 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
             {
                 Id = album.Id,
                 Name = album.Name,
-                ArtistId = album.ArtistId,
+                
                 ImageName = album.Image,
                 albumCategory = album.albumCategory
             };
@@ -113,16 +116,16 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
             {
                 return NotFound();
             }
-            ViewData["ArtistId"] = new SelectList(_context.Artists, "Id", "Id", album.ArtistId);
+          
             return View(editAlbumViewModels);
         }
 
         // POST: Dashboard/Albums/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        [HttpPost("Dashboard/{ArtistId}/Albums/Edit/{id}")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("Id,Name,ArtistId,albumCategory,Image")] EditAlbumViewModels editAlbumViewModels)
+        public async Task<IActionResult> Edit(string id,string ArtistId,[Bind("Id,Name,albumCategory,Image")] EditAlbumViewModels editAlbumViewModels)
         {
             if (id != editAlbumViewModels.Id)
             {
@@ -139,19 +142,23 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
                     {
                         Id = editAlbumViewModels.Id,
                         Name = editAlbumViewModels.Name,
-                        ArtistId = editAlbumViewModels.ArtistId,
                         albumCategory = editAlbumViewModels.albumCategory,
+                        ArtistId = ArtistId,
                     };
 
                     Album EditeImage = await _album.GetAlbum(editAlbumViewModels.Id);
-                    if (editAlbumViewModels.Image != null)
+                    if (editAlbumViewModels.Image != null )
                     {
                         
                         if (EditeImage.Image != null)
                         {
                            _album.DeleteImage(EditeImage.Image);
                            album.Image = _album.SaveImage(editAlbumViewModels.Image);
-                            
+
+                        }
+                        else
+                        {
+                            album.Image = _album.SaveImage(editAlbumViewModels.Image);
                         }
                         
                     }else
@@ -173,13 +180,15 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                _toastNotification.AddSuccessToastMessage("更新成功!!");
+                return RedirectToAction(nameof(Index), new { ArtistId = ArtistId });
             }
-            ViewData["ArtistId"] = new SelectList(_context.Artists, "Id", "Id", editAlbumViewModels.ArtistId);
+            _toastNotification.AddErrorToastMessage("更新失敗!!");
             return View(editAlbumViewModels);
         }
 
         // GET: Dashboard/Albums/Delete/5
+        [HttpGet("Dashboard/{ArtistId}/Albums/Delete/{id}")]
         public async Task<IActionResult> Delete(string id)
         {
             if (id == null || _context.Albums == null)
@@ -197,9 +206,9 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
         }
 
         // POST: Dashboard/Albums/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost("Dashboard/{ArtistId}/Albums/Delete/{id}"), ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(string id)
+        public async Task<IActionResult> DeleteConfirmed(string id,string ArtistId)
         {
             if (_context.Albums == null)
             {
@@ -214,10 +223,12 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
 
             if (album != null &&_album.DeleteAlbum(id))
             {
-                return RedirectToAction(nameof(Index));
+                _toastNotification.AddSuccessToastMessage("刪除成功!!");
+                return RedirectToAction(nameof(Index),new { ArtistId= ArtistId });
             }
             else
             {
+                _toastNotification.AddErrorToastMessage("刪除失敗!!");
                 return RedirectToAction("Edit", album.Id);
             }
             

@@ -40,7 +40,12 @@ namespace Core6Music.Web.Repository
 
         public async Task<IEnumerable<Artist>> GetAllArtistAsync()
         {
-            return await _musicDateContext.Artists.ToListAsync();
+            return await _musicDateContext.Artists.
+                Include(x => x.artistContextImages).
+                Include(x => x.artistBackImages).
+                Include(x => x.artistHeadImages).
+                Include(album =>album.albums).
+                ToListAsync();
         }
 
         public async Task<Artist> GetArtistAsync(string Id)
@@ -87,8 +92,8 @@ namespace Core6Music.Web.Repository
             Artist DeleteArtist = _musicDateContext.Artists.FirstOrDefault(x => x.Id == Id);
             if(DeleteArtist.artistBackImages != null )
             {
-                ArtistBackImage artistBackImage = DeleteArtist.artistBackImages.FirstOrDefault(x => x.ArtistId == Id);
-                string DeletePath = Path.Combine(_webHostEnvironment.WebRootPath, "Image/Artist/BackImage", artistBackImage.ImageName);
+                
+                string DeletePath = Path.Combine(_webHostEnvironment.WebRootPath, "Image/Artist/BackImage", DeleteArtist.artistBackImages.ImageName);
                 if (Directory.Exists(DeletePath))
                 {
                     Directory.Delete(DeletePath);
@@ -96,8 +101,8 @@ namespace Core6Music.Web.Repository
             }
             if (DeleteArtist.artistHeadImages != null )
             {
-                ArtistHeadImage artistHeadImage = DeleteArtist.artistHeadImages.FirstOrDefault(x =>x.ArtistId == Id);
-                string DeletePath = Path.Combine(_webHostEnvironment.WebRootPath, "Image/Artist/ContextImage", artistHeadImage.ImageName);
+                
+                string DeletePath = Path.Combine(_webHostEnvironment.WebRootPath, "Image/Artist/ContextImage", DeleteArtist.artistHeadImages.ImageName);
                 if (Directory.Exists(DeletePath))
                 {
                     Directory.Delete(DeletePath);
@@ -105,8 +110,8 @@ namespace Core6Music.Web.Repository
             }
             if (DeleteArtist.artistContextImages != null)
             {
-                 ArtistContextImage artistContextImage = DeleteArtist.artistContextImages.FirstOrDefault(x => x.ArtistId == Id);
-                string DeletePath = Path.Combine(_webHostEnvironment.WebRootPath, "Image/Artist/HeadImage", artistContextImage.ImageName);
+                 
+                string DeletePath = Path.Combine(_webHostEnvironment.WebRootPath, "Image/Artist/HeadImage", DeleteArtist.artistContextImages.ImageName);
                 if (Directory.Exists(DeletePath))
                 {
                     Directory.Delete(DeletePath);

@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Core6Music.Web.DateContext;
 using Core6Music.Web.Models;
-using TagLib;
 using Core6Music.Web.Areas.Dashboard.ViewModels;
 using NToastNotify;
+
 
 
 namespace Core6Music.Web.Areas.Dashboard.Controllers
@@ -27,12 +23,20 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
             _webHostEnvironment = webHostEnvironment;
             _toastNotification = toastNotification;
         }
-
+        
         // GET: Dashboard/Songs
-        public async Task<IActionResult> Index()
+        [HttpGet("Dashboard/{AdlumId}/Song")]
+        public async Task<IActionResult> Index(string AdlumId)
         {
-            var musicDateContext = _context.Songs.Include(s => s.Album);
-            return View(await musicDateContext.ToListAsync());
+            
+            var musicDateContext = await _context.Songs.Include(s => s.Album).Where(asong => asong.AlbumId == AdlumId).ToListAsync();
+
+            AllSongViewModels allSongViewModels = new AllSongViewModels
+            {
+                songs = musicDateContext,
+                AlbumId = AdlumId
+            };
+            return View(allSongViewModels);
         }
 
         // GET: Dashboard/Songs/Details/5
@@ -46,6 +50,8 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
             var song = await _context.Songs
                 .Include(s => s.Album)
                 .FirstOrDefaultAsync(m => m.Id == id);
+            string Mp3Path = Path.Combine(_webHostEnvironment.WebRootPath, "MP3", song.Mp3NameFile);
+            ViewBag.Data = "data:audio/wav;base64," + Convert.ToBase64String(System.IO.File.ReadAllBytes(Path.Combine(Mp3Path)));
             if (song == null)
             {
                 return NotFound();
@@ -77,29 +83,35 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
         {
             Album song = await _context.Albums.FirstOrDefaultAsync(x => x.Id == AdlumId);
             songViewModel.album = song;
-            IFormFile Mp3File = songViewModel.Mp3File;
+
+
+            //新增MP3的檔案
+            IFormFile Mp3File =  songViewModel.Mp3File;
             string Mp3Path = Path.Combine(_webHostEnvironment.WebRootPath, "MP3");
             if (!Directory.Exists(Mp3Path))
             {
                 Directory.CreateDirectory(Mp3Path);
             }
 
-            string SaveMp3Path = Path.Combine(Mp3Path, Mp3File.FileName);
+            string SFileName = Guid.NewGuid().ToString()+ Mp3File.FileName;
+            string SaveMp3Path = Path.Combine(Mp3Path, SFileName);
 
             using (var steam = new FileStream(SaveMp3Path, FileMode.Create))
             {
                 Mp3File.CopyTo(steam);
             }
 
-
+        
             var FileName = TagLib.File.Create(SaveMp3Path);
             string[] Artist = FileName.Tag.Artists;
+            string ArtistName = String.Join(",", Artist);
             string Name = FileName.Tag.Title;
             TimeSpan Mp3Time = FileName.Properties.Duration;
-            if (FileName.Tag.Title == null && FileName.Tag.Artists == null) 
+            if (FileName.Tag.Title == null && FileName.Tag.Artists.Count() == 0) 
             {
-           
+              
                 _toastNotification.AddErrorToastMessage("MP3 檔案創作者是空的");
+               
                 return View(songViewModel);
             }
 
@@ -109,14 +121,19 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
                 AlbumId = AdlumId,
                 SongTime = Mp3Time,
                 CreateDate = DateTime.Now,
-                ArtistName = Artist.ToString(),
-                Mp3NameFile = Mp3File.FileName
+                ArtistName = ArtistName,
+                Mp3NameFile = SFileName
             };
             
 
             _context.Add(CreateSong);
                 
-            await _context.SaveChangesAsync();
+            if(await _context.SaveChangesAsync() > 0)
+            {
+                _toastNotification.AddSuccessToastMessage("儲存成功!!");
+                return RedirectToAction(nameof(Index), new { AdlumId = AdlumId });
+                
+            }
                
           
             return View(CreateSong);
@@ -178,7 +195,7 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
         }
 
 
-        [HttpPost("Dashboard/{AdlumId}/Song/Delete/id")]
+        [HttpGet("Dashboard/{AdlumId}/Song/Delete/{id}")]
         // GET: Dashboard/Songs/Delete/5
         public async Task<IActionResult> Delete(int? id,string AdlumId)
         {
@@ -199,19 +216,19 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
         }
 
         // POST: Dashboard/Songs/Delete/5
-        [HttpPost("Dashboard/{AdlumId}/Song/Delete/id")]
-        [HttpPost, ActionName("Delete")]
+
+        [HttpPost("Dashboard/{AdlumId}/Song/Delete/{id}"), ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int id, string AdlumId)
         {
             if (_context.Songs == null)
             {
                 return Problem("Entity set 'MusicDateContext.Songs'  is null.");
             }
-           
-            
+
+
             var song = await _context.Songs.FindAsync(id);
-            string DeletePath = Path.Combine(_webHostEnvironment.WebRootPath, "MP3",song.Mp3NameFile);
+            string DeletePath = Path.Combine(_webHostEnvironment.WebRootPath, "MP3", song.Mp3NameFile);
             if (Directory.Exists(DeletePath))
             {
                 Directory.Delete(DeletePath);
@@ -220,9 +237,20 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
             {
                 _context.Songs.Remove(song);
             }
+
+            if (await _context.SaveChangesAsync() > 0)
+            {
+                _toastNotification.AddSuccessToastMessage("刪除成功!!");
+                return RedirectToAction(nameof(Index), new { AdlumId = AdlumId });
+
+            }
+            else
+            {
+                _toastNotification.AddErrorToastMessage("刪除失敗!!");
+                return RedirectToAction(nameof(Delete), new { AdlumId = AdlumId ,id = id });
+            }
             
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            
         }
 
         private bool SongExists(int id)

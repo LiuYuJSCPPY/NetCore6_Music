@@ -13,8 +13,24 @@
       "PackagePath": "staticwebassets\\Core6Music.Web.bundle.scp.css"
     },
     {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Album\\10d6cc2e-581f-4d22-8676-a4867d7f55ae-pexels-hassan-ouajbir-1860160.jpg",
+      "PackagePath": "staticwebassets\\Image\\Album\\10d6cc2e-581f-4d22-8676-a4867d7f55ae-pexels-hassan-ouajbir-1860160.jpg"
+    },
+    {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Album\\5b99aea9-d155-4274-be67-a7de3b586160-dea2a4a2b3245617fe393c3f2dac9bc1.jpg",
       "PackagePath": "staticwebassets\\Image\\Album\\5b99aea9-d155-4274-be67-a7de3b586160-dea2a4a2b3245617fe393c3f2dac9bc1.jpg"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Album\\b37d05f3-8803-43ed-905b-353924cacfa5-OIP (2).jfif",
+      "PackagePath": "staticwebassets\\Image\\Album\\b37d05f3-8803-43ed-905b-353924cacfa5-OIP (2).jfif"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Album\\b3eed414-4b27-400b-97aa-bfbf3308a4c7-OIP (2).jfif",
+      "PackagePath": "staticwebassets\\Image\\Album\\b3eed414-4b27-400b-97aa-bfbf3308a4c7-OIP (2).jfif"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Album\\b5a102af-603f-4be7-87ad-8084057e882a-restaurant-1837150_1920.jpg",
+      "PackagePath": "staticwebassets\\Image\\Album\\b5a102af-603f-4be7-87ad-8084057e882a-restaurant-1837150_1920.jpg"
     },
     {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\02d94ba6-85cf-4927-ab86-1d0824cdb162-23242834OIP (1).jfif",
@@ -37,6 +53,10 @@
       "PackagePath": "staticwebassets\\Image\\Artist\\BackImage\\6787817c-acac-4bd2-8837-e98eb4eca62b-23443035131137.jpg"
     },
     {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\67fb1c1e-253b-484d-8bb7-7e038248f991-23440119hotel-1111199_1920.jpg",
+      "PackagePath": "staticwebassets\\Image\\Artist\\BackImage\\67fb1c1e-253b-484d-8bb7-7e038248f991-23440119hotel-1111199_1920.jpg"
+    },
+    {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\73a3feee-ff38-4bf8-a54c-3d8ef0de4b27-23282859OIP (1).jfif",
       "PackagePath": "staticwebassets\\Image\\Artist\\BackImage\\73a3feee-ff38-4bf8-a54c-3d8ef0de4b27-23282859OIP (1).jfif"
     },
@@ -49,12 +69,24 @@
       "PackagePath": "staticwebassets\\Image\\Artist\\BackImage\\9d7f668d-e9ac-47a7-aba3-719aedfd437f-23372902OIP (1).jfif"
     },
     {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\9fec6e13-528f-4497-9b49-bdd3f7d2dab7-23390157327033272_WxH.jpg",
+      "PackagePath": "staticwebassets\\Image\\Artist\\BackImage\\9fec6e13-528f-4497-9b49-bdd3f7d2dab7-23390157327033272_WxH.jpg"
+    },
+    {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\be1c95de-b7ba-41b6-a3a7-c76202ed8ee1-23462801dea2a4a2b3245617fe393c3f2dac9bc1.jpg",
       "PackagePath": "staticwebassets\\Image\\Artist\\BackImage\\be1c95de-b7ba-41b6-a3a7-c76202ed8ee1-23462801dea2a4a2b3245617fe393c3f2dac9bc1.jpg"
     },
     {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\c85a41a3-f529-4367-b765-9fce15b540c5-23373156R.jfif",
+      "PackagePath": "staticwebassets\\Image\\Artist\\BackImage\\c85a41a3-f529-4367-b765-9fce15b540c5-23373156R.jfif"
+    },
+    {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\d5b0674d-51b5-40b2-a949-1ce25cbf7433-23312822OIP.jfif",
       "PackagePath": "staticwebassets\\Image\\Artist\\BackImage\\d5b0674d-51b5-40b2-a949-1ce25cbf7433-23312822OIP.jfif"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\ContextImage\\11f9140d-1311-46ec-a565-7df0ec35ed50-23390157OIP.jfif",
+      "PackagePath": "staticwebassets\\Image\\Artist\\ContextImage\\11f9140d-1311-46ec-a565-7df0ec35ed50-23390157OIP.jfif"
     },
     {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\ContextImage\\3075add1-5a17-4445-b196-331c1aaccf0b-23442835OIP.jfif",
@@ -77,6 +109,14 @@
       "PackagePath": "staticwebassets\\Image\\Artist\\ContextImage\\5faf0639-a89f-45f6-858c-d95f004202f9-23312847OIP.jfif"
     },
     {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\ContextImage\\84e26cee-6095-4b4b-b0ad-1211790c40bd-23440119lobby-346426_1920.jpg",
+      "PackagePath": "staticwebassets\\Image\\Artist\\ContextImage\\84e26cee-6095-4b4b-b0ad-1211790c40bd-23440119lobby-346426_1920.jpg"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\ContextImage\\972e4034-ee60-48b9-aa5b-f8b0428530a7-2337315619181cdd581ef6139e7f1cd6716607e9.jfif",
+      "PackagePath": "staticwebassets\\Image\\Artist\\ContextImage\\972e4034-ee60-48b9-aa5b-f8b0428530a7-2337315619181cdd581ef6139e7f1cd6716607e9.jfif"
+    },
+    {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\ContextImage\\98c204db-b816-4781-90fe-e91efb1f2def-23202831OIP.jfif",
       "PackagePath": "staticwebassets\\Image\\Artist\\ContextImage\\98c204db-b816-4781-90fe-e91efb1f2def-23202831OIP.jfif"
     },
@@ -93,6 +133,10 @@
       "PackagePath": "staticwebassets\\Image\\Artist\\HeadImage\\06789a70-1176-4493-814e-ea9a0ec4f20d-23312855OIP.jfif"
     },
     {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\HeadImage\\384610cc-f8e9-464e-ba9e-337c674ea1dc-23440119bedroom-1285156_1920.jpg",
+      "PackagePath": "staticwebassets\\Image\\Artist\\HeadImage\\384610cc-f8e9-464e-ba9e-337c674ea1dc-23440119bedroom-1285156_1920.jpg"
+    },
+    {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\HeadImage\\3fb26df4-bc85-4441-927f-821f844b326c-23443051woman-7577808_1920.jpg",
       "PackagePath": "staticwebassets\\Image\\Artist\\HeadImage\\3fb26df4-bc85-4441-927f-821f844b326c-23443051woman-7577808_1920.jpg"
     },
@@ -105,12 +149,80 @@
       "PackagePath": "staticwebassets\\Image\\Artist\\HeadImage\\8abcd158-1f8e-4582-aa99-eb896416f8aa-23202833OIP (1).jfif"
     },
     {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\HeadImage\\ab625ddc-177b-45d8-a34d-adf757f4ef4c-23373156wp5188719.jpg",
+      "PackagePath": "staticwebassets\\Image\\Artist\\HeadImage\\ab625ddc-177b-45d8-a34d-adf757f4ef4c-23373156wp5188719.jpg"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\HeadImage\\b3b85c21-ada7-4ec3-8a01-e96147e9308c-23390157327033272_WxH.jpg",
+      "PackagePath": "staticwebassets\\Image\\Artist\\HeadImage\\b3b85c21-ada7-4ec3-8a01-e96147e9308c-23390157327033272_WxH.jpg"
+    },
+    {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\HeadImage\\cec0de37-88e3-4ee7-ab34-cd32d2fa6ac3-23282859OIP (1).jfif",
       "PackagePath": "staticwebassets\\Image\\Artist\\HeadImage\\cec0de37-88e3-4ee7-ab34-cd32d2fa6ac3-23282859OIP (1).jfif"
     },
     {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\HeadImage\\decdc512-140a-4c0c-a1de-03d04b646ae7-23382832OIP.jfif",
       "PackagePath": "staticwebassets\\Image\\Artist\\HeadImage\\decdc512-140a-4c0c-a1de-03d04b646ae7-23382832OIP.jfif"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\MP3\\00d185fc-f027-4f7c-be85-318837b40888kevin-macleod-johann-pachelbel-canon-in-d-for-two-renaissance-harps.mp3",
+      "PackagePath": "staticwebassets\\MP3\\00d185fc-f027-4f7c-be85-318837b40888kevin-macleod-johann-pachelbel-canon-in-d-for-two-renaissance-harps.mp3"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\MP3\\08d7ca48-8012-4549-8950-99eeb853967fBLACKPINK_Forever_Young_Lyrics__Forever_Young__Color_Coded_Lyrics_Han_Rom_Ina.mp3",
+      "PackagePath": "staticwebassets\\MP3\\08d7ca48-8012-4549-8950-99eeb853967fBLACKPINK_Forever_Young_Lyrics__Forever_Young__Color_Coded_Lyrics_Han_Rom_Ina.mp3"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\MP3\\0ac88c74-9d65-4154-a72d-342dc77f3ed5alexander-nakarada-brothers-in-arms.mp3",
+      "PackagePath": "staticwebassets\\MP3\\0ac88c74-9d65-4154-a72d-342dc77f3ed5alexander-nakarada-brothers-in-arms.mp3"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\MP3\\133f0d01-51cd-43f6-905a-aacdc7fba1c2scott-buckley-ashes-of-a-fallen-year.mp3",
+      "PackagePath": "staticwebassets\\MP3\\133f0d01-51cd-43f6-905a-aacdc7fba1c2scott-buckley-ashes-of-a-fallen-year.mp3"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\MP3\\1e45fbd4-a4a5-451d-8dea-f28d47fd91b7kevin-macleod-johann-pachelbel-canon-in-d-for-two-renaissance-harps.mp3",
+      "PackagePath": "staticwebassets\\MP3\\1e45fbd4-a4a5-451d-8dea-f28d47fd91b7kevin-macleod-johann-pachelbel-canon-in-d-for-two-renaissance-harps.mp3"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\MP3\\3e482f0a-bfa3-4730-afbd-aabfbd1038f2scott-buckley-ashes-of-a-fallen-year.mp3",
+      "PackagePath": "staticwebassets\\MP3\\3e482f0a-bfa3-4730-afbd-aabfbd1038f2scott-buckley-ashes-of-a-fallen-year.mp3"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\MP3\\460dc6c2-1782-49dd-bb3b-c51dce44737dalex-productions-freedom.mp3",
+      "PackagePath": "staticwebassets\\MP3\\460dc6c2-1782-49dd-bb3b-c51dce44737dalex-productions-freedom.mp3"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\MP3\\6d7fa709-0281-4e1d-a789-849bfbdfe75ascott-buckley-ashes-of-a-fallen-year.mp3",
+      "PackagePath": "staticwebassets\\MP3\\6d7fa709-0281-4e1d-a789-849bfbdfe75ascott-buckley-ashes-of-a-fallen-year.mp3"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\MP3\\717ce750-4557-4a47-b2be-92c0546eff8ayt1s.com - 问篆.mp3",
+      "PackagePath": "staticwebassets\\MP3\\717ce750-4557-4a47-b2be-92c0546eff8ayt1s.com - 问篆.mp3"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\MP3\\8ff74229-fd29-476e-9e8e-e2c38f6b7fd9scott-buckley-ashes-of-a-fallen-year.mp3",
+      "PackagePath": "staticwebassets\\MP3\\8ff74229-fd29-476e-9e8e-e2c38f6b7fd9scott-buckley-ashes-of-a-fallen-year.mp3"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\MP3\\alexander-nakarada-brothers-in-arms.mp3",
+      "PackagePath": "staticwebassets\\MP3\\alexander-nakarada-brothers-in-arms.mp3"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\MP3\\b6192958-66b7-4afe-a4f5-31ae803b04b8alex-productions-freedom.mp3",
+      "PackagePath": "staticwebassets\\MP3\\b6192958-66b7-4afe-a4f5-31ae803b04b8alex-productions-freedom.mp3"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\MP3\\c99f05e6-acf9-481d-a58e-dda6062356a7alexander-nakarada-brothers-in-arms.mp3",
+      "PackagePath": "staticwebassets\\MP3\\c99f05e6-acf9-481d-a58e-dda6062356a7alexander-nakarada-brothers-in-arms.mp3"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\MP3\\d6f38b21-9723-4f72-806a-8b12d486bff6yt1s.com - 问篆.mp3",
+      "PackagePath": "staticwebassets\\MP3\\d6f38b21-9723-4f72-806a-8b12d486bff6yt1s.com - 问篆.mp3"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\MP3\\e99f9ffd-f644-4022-89c7-bc271376ddbaalexander-nakarada-brothers-in-arms.mp3",
+      "PackagePath": "staticwebassets\\MP3\\e99f9ffd-f644-4022-89c7-bc271376ddbaalexander-nakarada-brothers-in-arms.mp3"
     },
     {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\MP3\\scott-buckley-ashes-of-a-fallen-year.mp3",

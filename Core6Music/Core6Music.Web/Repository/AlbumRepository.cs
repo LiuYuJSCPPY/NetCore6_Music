@@ -52,12 +52,12 @@ namespace Core6Music.Web.Repository
 
         public async Task<Album> GetAlbum(string Id)
         {
-            return await _musicDateContext.Albums.AsNoTracking().Include(m => m.Artist).FirstOrDefaultAsync(x => x.Id == Id);
+            return await _musicDateContext.Albums.AsNoTracking().Include(m => m.songs).FirstOrDefaultAsync(x => x.Id == Id);
         }
 
         public async Task<IList<Album>> GetAllAlbum()
         {
-            return await _musicDateContext.Albums.Include(x => x.Artist).ToListAsync();
+            return await _musicDateContext.Albums.Include(x => x.Artist).Include(song => song.songs).ToListAsync();
         }
         public string SaveImage(IFormFile formFile)
         {

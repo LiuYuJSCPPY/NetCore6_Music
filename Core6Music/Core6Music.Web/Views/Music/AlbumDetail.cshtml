@@ -1,0 +1,101 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Core6Music.Web.ViewModels.AlbumDetailViewModels
+@using Core6Music.Web.DateContext.Enum;
+@{
+    string AbPath = "~/Image/Album/";
+    string mp3Path = "/MP3/";
+    TimeSpan AlbumTotatl =new TimeSpan(Model.album.songs.Sum(x => x.SongTime.Ticks));
+}
+<div class="container py-4">
+
+
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">@Model.album.Name</h1>
+            <img asp-append-version="true" width="500px" height="300px" src="@(AbPath + Model.album.Image)" />
+        </div>
+    </div>
+
+    <h1 class="display-4">歌曲</h1>
+    <p>
+       
+        @AlbumTotatl.Hours 小時 @AlbumTotatl.Minutes 分鐘 @AlbumTotatl.Seconds 秒
+    </p>
+    <div class="bd-example">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">名字</th>
+                    <th scope="col"></th>
+                    <th scope="col">時間長度</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.album.songs)
+                {
+
+                    <tr>
+
+                        <td>
+                            <div class="container bd-example-row text-center">
+                                <div class="row">
+                                    <div class="text-center col">
+                                        <p>@item.Name</p>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+
+                        </td>
+                        <td>
+                            <div class="text-center col text-center">
+                                <p>@item.ArtistName</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <audio controls="controls" src="@(mp3Path + item.Mp3NameFile)" preload="none">
+
+
+                                    Your browser does not support this audio format.
+                                </audio>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                @item.SongTime.Minutes : @item.SongTime.Seconds
+                            </div>
+                        </td>
+
+                    </tr>
+                }
+
+            </tbody>
+
+        </table>
+    </div>
+
+
+
+    <script>
+        var audios = document.getElementsByTagName("audio");
+        // 暂停函数
+        function pauseAll() {
+            var self = this;
+            [].forEach.call(audios, function (i) {
+                // 将audios中其他的audio全部暂停
+                i !== self && i.pause();
+            })
+        }
+        // 给play事件绑定暂停函数
+        [].forEach.call(audios, function (i) {
+            i.addEventListener("play", pauseAll.bind(i));
+        })
+    </script>

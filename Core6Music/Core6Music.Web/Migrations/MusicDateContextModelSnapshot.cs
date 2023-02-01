@@ -97,7 +97,8 @@ namespace Core6Music.Web.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ArtistId");
+                    b.HasIndex("ArtistId")
+                        .IsUnique();
 
                     b.ToTable("ArtistBackImage", "dbo");
                 });
@@ -120,7 +121,8 @@ namespace Core6Music.Web.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ArtistId");
+                    b.HasIndex("ArtistId")
+                        .IsUnique();
 
                     b.ToTable("ArtistContextImage", "dbo");
                 });
@@ -143,7 +145,8 @@ namespace Core6Music.Web.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ArtistId");
+                    b.HasIndex("ArtistId")
+                        .IsUnique();
 
                     b.ToTable("ArtistHeadImage", "dbo");
                 });
@@ -589,8 +592,8 @@ namespace Core6Music.Web.Migrations
             modelBuilder.Entity("Core6Music.Web.Models.ArtistBackImage", b =>
                 {
                     b.HasOne("Core6Music.Web.Models.Artist", "Artist")
-                        .WithMany("artistBackImages")
-                        .HasForeignKey("ArtistId")
+                        .WithOne("artistBackImages")
+                        .HasForeignKey("Core6Music.Web.Models.ArtistBackImage", "ArtistId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -600,8 +603,8 @@ namespace Core6Music.Web.Migrations
             modelBuilder.Entity("Core6Music.Web.Models.ArtistContextImage", b =>
                 {
                     b.HasOne("Core6Music.Web.Models.Artist", "Artist")
-                        .WithMany("artistContextImages")
-                        .HasForeignKey("ArtistId")
+                        .WithOne("artistContextImages")
+                        .HasForeignKey("Core6Music.Web.Models.ArtistContextImage", "ArtistId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -611,8 +614,8 @@ namespace Core6Music.Web.Migrations
             modelBuilder.Entity("Core6Music.Web.Models.ArtistHeadImage", b =>
                 {
                     b.HasOne("Core6Music.Web.Models.Artist", "Artist")
-                        .WithMany("artistHeadImages")
-                        .HasForeignKey("ArtistId")
+                        .WithOne("artistHeadImages")
+                        .HasForeignKey("Core6Music.Web.Models.ArtistHeadImage", "ArtistId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -815,11 +818,14 @@ namespace Core6Music.Web.Migrations
                 {
                     b.Navigation("albums");
 
-                    b.Navigation("artistBackImages");
+                    b.Navigation("artistBackImages")
+                        .IsRequired();
 
-                    b.Navigation("artistContextImages");
+                    b.Navigation("artistContextImages")
+                        .IsRequired();
 
-                    b.Navigation("artistHeadImages");
+                    b.Navigation("artistHeadImages")
+                        .IsRequired();
 
                     b.Navigation("fans");
 

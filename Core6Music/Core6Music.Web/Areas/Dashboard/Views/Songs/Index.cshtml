@@ -1,13 +1,16 @@
-﻿@model IEnumerable<Core6Music.Web.Models.Song>
+﻿@model Core6Music.Web.Areas.Dashboard.ViewModels.AllSongViewModels
 
 @{
     ViewData["Title"] = "Index";
+    TimeSpan totaltime = new TimeSpan(Model.songs.Sum(x => x.SongTime.Ticks));
+   
 }
 
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" asp-route-AdlumId="@Model.AlbumId">Create New</a>
+    @totaltime.Hours 小時 @totaltime.Minutes 分鐘 @totaltime.Seconds 秒
 </p>
 <table class="table">
     <thead>
@@ -28,13 +31,13 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model.songs) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Album.Id)
+                @Html.DisplayFor(modelItem => item.Album.Name)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.SongTime)

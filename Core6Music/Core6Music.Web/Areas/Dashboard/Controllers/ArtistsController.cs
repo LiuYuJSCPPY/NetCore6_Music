@@ -1,18 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Core6Music.Web.DateContext;
 using Core6Music.Web.Models;
 using Core6Music.Web.Interface;
 using Core6Music.Web.Areas.Dashboard.ViewModels;
 using HashidsNet;
-using System.Security.Policy;
-using Microsoft.AspNetCore.Hosting;
-using System.IO;
 using NToastNotify;
 
 namespace Core6Music.Web.Areas.Dashboard.Controllers
@@ -37,6 +29,7 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
         public async Task<IActionResult> Index()
         {
             AllArtistsViewModels allArtistsView= new AllArtistsViewModels();
+          
             allArtistsView.Artists = await _artist.GetAllArtistAsync();
               return View(allArtistsView);
         }

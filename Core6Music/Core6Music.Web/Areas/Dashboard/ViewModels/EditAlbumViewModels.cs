@@ -10,8 +10,7 @@ namespace Core6Music.Web.Areas.Dashboard.ViewModels
 
         [DisplayName("名字")]
         public string Name { get; set; }
-        [DisplayName("藝人")]
-        public string ArtistId { get; set; }
+        
         
         [DisplayName("圖片")]
         public string? ImageName { get; set; }
