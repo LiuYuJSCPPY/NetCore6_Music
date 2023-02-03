@@ -45,9 +45,10 @@ namespace Core6Music.Web.Controllers
                 Include(c=>c.artistContextImages).
                 Include(b => b.artistBackImages).
                 Include(h => h.artistHeadImages).
+                Include(h => h.favoriteArtists).
                 FirstOrDefaultAsync(x => x.Id == ArtistID);
 
-            var songModel = await _musicDateContext.Songs.Include(x =>x.Album).Where(x =>x.Album.ArtistId == ArtistID).Take(10).ToListAsync();
+            var songModel = await _musicDateContext.Songs.Include(x =>x.Album).Include(x => x.favoriteSongs).Where(x =>x.Album.ArtistId == ArtistID).Take(10).ToListAsync();
             var AlbumModel = await _musicDateContext.Albums.Where(x => x.ArtistId == ArtistID).Take(9).ToListAsync();
             IndexArtistVIewModel indexArtistVIewModel = new IndexArtistVIewModel()
             {
@@ -64,7 +65,7 @@ namespace Core6Music.Web.Controllers
         {
             
             var TenAlbum = await _musicDateContext.Albums.Include(artist => artist.Artist).Take(10).ToListAsync();
-            var album = await _musicDateContext.Albums.Include(x=>x.songs).FirstOrDefaultAsync(x => x.Id == AlbumId);
+            var album = await _musicDateContext.Albums.Include(x => x.favoriteAlbums).Include(x=>x.songs).ThenInclude(x => x.favoriteSongs).FirstOrDefaultAsync(x => x.Id == AlbumId);
             var AllAritst = await _musicDateContext.Artists.ToListAsync();
             AlbumDetailViewModels albumDetailViewModels = new AlbumDetailViewModels()
             {
@@ -76,9 +77,9 @@ namespace Core6Music.Web.Controllers
         }
 
         [HttpGet("Artist/{ArtistID}/AllAlbum")]
-        public async Task<IActionResult> AllAlbum (string ArtistID)
+        public async Task<IActionResult> ArtistAllAlbum(string ArtistID)
         {
-            var AllAlbum = await _musicDateContext.Albums.Include(song => song.songs).ToListAsync();
+            var AllAlbum = await _musicDateContext.Albums.Include(song => song.songs).ThenInclude(x => x.favoriteSongs).Where(x =>x.ArtistId == ArtistID).Include(x => x.favoriteAlbums).ToListAsync();
             return View(AllAlbum);
         }
     }

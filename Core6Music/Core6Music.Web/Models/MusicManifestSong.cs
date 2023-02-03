@@ -6,7 +6,8 @@ namespace Core6Music.Web.Models
     [Table("MusicManifestSong", Schema = "dbo")]
     public class MusicManifestSong
     {
-        [Key]
+        
+        public int Id { get; set; }
         public int MusicManifestId { get; set; }
         public MusicManifest MusicManifest { get; set; }
         public int SongId { get; set; }

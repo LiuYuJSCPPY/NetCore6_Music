@@ -1,5 +1,24 @@
-﻿@*
+﻿@model IEnumerable<Core6Music.Web.Models.Album>
+@using Core6Music.Web.DateContext.Enum;
+
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+    string AbiumPath = "~/Image/Album/";
 }
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    @foreach (var item in Model)
+    {
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="@(AbiumPath+item.Image)" asp-append-version="true" class="card-img-top" />
+                <div class="card-body">
+                    <h5 class="card-title">@item.Name</h5>
+                    <p class="card-text">@((AlbumCategory)item.albumCategory)</p>
+                    <a asp-action="AlbumDetail" asp-route-AlbumId="@item.Id" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

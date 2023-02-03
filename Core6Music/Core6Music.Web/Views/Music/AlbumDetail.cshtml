@@ -3,10 +3,16 @@
 *@
 @model Core6Music.Web.ViewModels.AlbumDetailViewModels
 @using Core6Music.Web.DateContext.Enum;
+@using Microsoft.AspNetCore.Identity;
+
+
+@inject SignInManager<MusicUser> SignInManager
+@inject UserManager<MusicUser> UserManager
 @{
     string AbPath = "~/Image/Album/";
     string mp3Path = "/MP3/";
     TimeSpan AlbumTotatl =new TimeSpan(Model.album.songs.Sum(x => x.SongTime.Ticks));
+    IdentityUser user = await UserManager.GetUserAsync(User);
 }
 <div class="container py-4">
 
@@ -14,6 +20,16 @@
     <div class="p-5 mb-4 bg-light rounded-3">
         <div class="container-fluid py-5">
             <h1 class="display-5 fw-bold">@Model.album.Name</h1>
+            @if(Model.album.favoriteAlbums.FirstOrDefault() != null)
+            {
+                <button onclick="FavoriteAlbum('@Url.Action("AddFavoriteAlbum","MusicUser",new{Id = Model.album.Id})')">取消關注</button>
+            }
+            else
+            {
+                <button onclick="FavoriteAlbum('@Url.Action("AddFavoriteAlbum","MusicUser",new{Id = Model.album.Id})')">關注</button>
+            }
+            
+           
             <img asp-append-version="true" width="500px" height="300px" src="@(AbPath + Model.album.Image)" />
         </div>
     </div>
@@ -39,7 +55,20 @@
                 {
 
                     <tr>
+                        <td>
+                            <div class="container bd-example-row text-center">
+                                <div class="row">
+                                    <div class="text-center col">
+                                        <img src="@(AbPath+item.Album.Image)" width="40px" height="40px" asp-append-version="true">
 
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+
+                        </td>
                         <td>
                             <div class="container bd-example-row text-center">
                                 <div class="row">
@@ -74,6 +103,22 @@
                             </div>
                         </td>
 
+                        @if (item.favoriteSongs.Where(x => x.MusicUserId == user.Id).Where(x => x.SongId == item.Id).FirstOrDefault() != null)
+                        {
+                            <td>
+                                <div>
+                                    <button onclick="FavoriteSong(@Url.Action("AddorDeleteFavoriteSong","MusicUser",new{Id = item.Id}))">取消喜歡</button> FavoriteSong
+                                </div>
+                            </td>
+                        }
+                        else
+                        {
+                            <td>
+                                <div>
+                                    <button onclick="FavoriteSong('@Url.Action("AddorDeleteFavoriteSong","MusicUser",new{Id = item.Id})')">喜歡</button> FavoriteSong
+                                </div>
+                            </td>
+                        }
                     </tr>
                 }
 
@@ -98,4 +143,16 @@
         [].forEach.call(audios, function (i) {
             i.addEventListener("play", pauseAll.bind(i));
         })
+
+        FavoriteAlbum = (url) =>{
+            $.ajax({
+                type:"get",
+                url : url,
+                success: function(res){
+                    if(res.Success){
+                        location.reload();
+                    }
+                }
+            })
+        }
     </script>

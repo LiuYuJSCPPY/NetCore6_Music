@@ -250,11 +250,9 @@ namespace Core6Music.Web.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Context")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Image")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MusicUserId")
@@ -262,7 +260,6 @@ namespace Core6Music.Web.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -274,24 +271,24 @@ namespace Core6Music.Web.Migrations
 
             modelBuilder.Entity("Core6Music.Web.Models.MusicManifestSong", b =>
                 {
-                    b.Property<int>("MusicManifestId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MusicManifestId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("MusicManifestId1")
+                    b.Property<int>("MusicManifestId")
                         .HasColumnType("int");
 
                     b.Property<int>("SongId")
                         .HasColumnType("int");
 
-                    b.HasKey("MusicManifestId");
+                    b.HasKey("Id");
 
-                    b.HasIndex("MusicManifestId1");
+                    b.HasIndex("MusicManifestId");
 
                     b.HasIndex("SongId");
 
@@ -713,7 +710,7 @@ namespace Core6Music.Web.Migrations
                 {
                     b.HasOne("Core6Music.Web.Models.MusicManifest", "MusicManifest")
                         .WithMany("musicManifestSongs")
-                        .HasForeignKey("MusicManifestId1")
+                        .HasForeignKey("MusicManifestId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
