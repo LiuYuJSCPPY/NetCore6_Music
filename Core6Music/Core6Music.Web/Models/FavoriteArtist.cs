@@ -7,7 +7,7 @@ namespace Core6Music.Web.Models
     [Table("FavoriteArtist",Schema ="dbo")]
     public class FavoriteArtist
     {
-        [Key]
+        public int Id { get; set; }
         public string MusicUserId { get; set; }
         public MusicUser MusicUser { get; set; }
         public string ArtistId { get; set; }

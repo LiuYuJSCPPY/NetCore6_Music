@@ -3,10 +3,14 @@
 *@
 @model IEnumerable<Core6Music.Web.Models.Album>
 @using Core6Music.Web.DateContext.Enum;
+@using Microsoft.AspNetCore.Identity;
 
+@inject SignInManager<MusicUser> SignInManager
+@inject UserManager<MusicUser> UserManager
 @{
     string AbPath = "~/Image/Album/";
     string mp3Path = "~/MP3/";
+    var user = await UserManager.GetUserAsync(User);
 }
 
 @foreach(var item in Model)
@@ -20,7 +24,16 @@
         <h1 class="display-5 fw-bold lh-1 mb-3">@item.Name</h1>
         <p class="lead">@((AlbumCategory)item.albumCategory).@item.songs.Count() 首歌曲</p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+                    @if(item.favoriteAlbums.Where(x => x.MusicUserId ==user.Id).Where(x => x.AlbumId ==item.Id).FirstOrDefault() != null)
+                    {
+                        <button type="button" onclick="favortAlbum(@Url.Action("AddorDeleteFavoriteAlbum","MusicUser",new {Id = item.Id}))" class="btn btn-primary btn-lg px-4 me-md-2">取消關注</button>
+                    }
+                    else
+                    {
+                        <button type="button" onclick="favortAlbum(@Url.Action("AddorDeleteFavoriteAlbum","MusicUser",new {Id = item.Id}))" class="btn btn-primary btn-lg px-4 me-md-2">關注</button>
+                       
+                    }
+                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
           <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
         </div>
       </div>
@@ -75,8 +88,26 @@
                                 @Mitem.SongTime.Minutes : @Mitem.SongTime.Seconds
                             </div>
                         </td>
-
+                        @if (Mitem.favoriteSongs.Where(x => x.MusicUserId == user.Id).Where(x => x.SongId == Mitem.Id).FirstOrDefault() != null)
+                        {
+                            <td>
+                                <div>
+                                    <button onclick="FavoriteSong(@Url.Action("AddorDeleteFavoriteSong","MusicUser",new{Id = Mitem.Id}))">取消喜歡</button> FavoriteSong
+                                </div>
+                            </td>
+                        }
+                        else
+                        {
+                            <td>
+                                <div>
+                                    <button onclick="FavoriteSong('@Url.Action("AddorDeleteFavoriteSong","MusicUser",new{Id = Mitem.Id})')">喜歡</button> FavoriteSong
+                                </div>
+                            </td>
+                        }
                     </tr>
+
+
+                   
                 }
 
             </tbody>
@@ -98,4 +129,29 @@
     [].forEach.call(audios, function (i) {
         i.addEventListener("play", pauseAll.bind(i));
     })
+
+    favortAlbum = (url) =>{
+        $.ajax({
+            type:"get",
+            url: url,
+            scuccess:function(res){
+                if(res.Success){
+                    location.reload();
+                }
+            }
+        })
+    }
+
+
+    favortSong = (url) =>{
+        $.ajax({
+            type:"get",
+            url: url,
+            scuccess:function(res){
+                if(res.Success){
+                    location.reload();
+                }
+            }
+        })
+    }
 </script>

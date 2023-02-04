@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pzpVUMwXxF4YiXKZk2AHFSJh/BTF4yApe+oOm/MtBx8=",
+  "Hash": "JZqZXRgeYal3VahM1uENViOIYo0EpGZm1BG6QGIxr64=",
   "Source": "Core6Music.Web",
   "BasePath": "_content/Core6Music.Web",
   "Mode": "Default",
@@ -1258,6 +1258,23 @@
       "OriginalItemSpec": "wwwroot\\Image\\Album\\b5a102af-603f-4be7-87ad-8084057e882a-restaurant-1837150_1920.jpg"
     },
     {
+      "Identity": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Album\\c7220dce-0ec7-4feb-b083-c8a7f4163696-20150826042859_bdd1I.jpg",
+      "SourceId": "Core6Music.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\",
+      "BasePath": "_content/Core6Music.Web",
+      "RelativePath": "Image/Album/c7220dce-0ec7-4feb-b083-c8a7f4163696-20150826042859_bdd1I.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\Album\\c7220dce-0ec7-4feb-b083-c8a7f4163696-20150826042859_bdd1I.jpg"
+    },
+    {
       "Identity": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\02d94ba6-85cf-4927-ab86-1d0824cdb162-23242834OIP (1).jfif",
       "SourceId": "Core6Music.Web",
       "SourceType": "Discovered",
@@ -1426,6 +1443,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Image\\Artist\\BackImage\\9fec6e13-528f-4497-9b49-bdd3f7d2dab7-23390157327033272_WxH.jpg"
+    },
+    {
+      "Identity": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\b9ccdc78-f785-45be-80a5-9af093f28df8-23000454131136.jpg",
+      "SourceId": "Core6Music.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\",
+      "BasePath": "_content/Core6Music.Web",
+      "RelativePath": "Image/Artist/BackImage/b9ccdc78-f785-45be-80a5-9af093f28df8-23000454131136.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\Artist\\BackImage\\b9ccdc78-f785-45be-80a5-9af093f28df8-23000454131136.jpg"
     },
     {
       "Identity": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\be1c95de-b7ba-41b6-a3a7-c76202ed8ee1-23462801dea2a4a2b3245617fe393c3f2dac9bc1.jpg",
@@ -1632,6 +1666,23 @@
       "OriginalItemSpec": "wwwroot\\Image\\Artist\\ContextImage\\98c204db-b816-4781-90fe-e91efb1f2def-23202831OIP.jfif"
     },
     {
+      "Identity": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\ContextImage\\ab47b373-23b2-4be1-8b10-fc5b341c4601-23000454131137.jpg",
+      "SourceId": "Core6Music.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\",
+      "BasePath": "_content/Core6Music.Web",
+      "RelativePath": "Image/Artist/ContextImage/ab47b373-23b2-4be1-8b10-fc5b341c4601-23000454131137.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\Artist\\ContextImage\\ab47b373-23b2-4be1-8b10-fc5b341c4601-23000454131137.jpg"
+    },
+    {
       "Identity": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\ContextImage\\aea65270-28f7-4dba-8523-9166a65c3b3b-23242834OIP.jfif",
       "SourceId": "Core6Music.Web",
       "SourceType": "Discovered",
@@ -1800,6 +1851,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Image\\Artist\\HeadImage\\cec0de37-88e3-4ee7-ab34-cd32d2fa6ac3-23282859OIP (1).jfif"
+    },
+    {
+      "Identity": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\HeadImage\\d3ea16f5-fd1a-46b5-b30b-bc25e6ef7715-23000454131135.jpg",
+      "SourceId": "Core6Music.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\",
+      "BasePath": "_content/Core6Music.Web",
+      "RelativePath": "Image/Artist/HeadImage/d3ea16f5-fd1a-46b5-b30b-bc25e6ef7715-23000454131135.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\Artist\\HeadImage\\d3ea16f5-fd1a-46b5-b30b-bc25e6ef7715-23000454131135.jpg"
     },
     {
       "Identity": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\HeadImage\\decdc512-140a-4c0c-a1de-03d04b646ae7-23382832OIP.jfif",
@@ -2956,6 +3024,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\MP3\\717ce750-4557-4a47-b2be-92c0546eff8ayt1s.com - 问篆.mp3"
+    },
+    {
+      "Identity": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\MP3\\8e33fb4d-b88e-4b09-aaec-d499d9dcae69yt1s.com - 问篆.mp3",
+      "SourceId": "Core6Music.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\",
+      "BasePath": "_content/Core6Music.Web",
+      "RelativePath": "MP3/8e33fb4d-b88e-4b09-aaec-d499d9dcae69yt1s.com - 问篆.mp3",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MP3\\8e33fb4d-b88e-4b09-aaec-d499d9dcae69yt1s.com - 问篆.mp3"
     },
     {
       "Identity": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\MP3\\8ff74229-fd29-476e-9e8e-e2c38f6b7fd9scott-buckley-ashes-of-a-fallen-year.mp3",

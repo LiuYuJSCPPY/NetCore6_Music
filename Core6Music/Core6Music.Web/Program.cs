@@ -20,7 +20,7 @@ builder.Services.AddMvc().AddNToastNotifyToastr();
 
 builder.Services.AddDbContext<MusicDateContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("MusicDateContext")));
 
-builder.Services.AddDefaultIdentity<MusicUser>(options => options.SignIn.RequireConfirmedAccount = true).AddRoles<IdentityRole>()
+builder.Services.AddDefaultIdentity<MusicUser>(options => options.SignIn.RequireConfirmedAccount = false).AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<MusicDateContext>();
 
 builder.Services.Configure<IdentityOptions>(options =>
@@ -43,6 +43,7 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.LoginPath = "/Identity/Account/Login";
     options.AccessDeniedPath = "/Identity/Account/AccessDenied";
     options.SlidingExpiration = true;
+  
 });
 
 builder.Services.AddScoped<IArtist, ArtistRepository>();

@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Core6Music.Web.Models.FavoriteArtist>
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    string Path = "~/Image/Artist/HeadImage/";
+}
+<div class="row row-cols-1 row-cols-md-6 g-4">
+    @foreach (var item in Model)
+    {
+        <div class="col">
+            <div class="card h-100">
+                <img src="@(Path + item.Artist.artistHeadImages.ImageName)" asp-append-version="true" class="img-fluid rounded-start" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Artist.Name</h5>
+
+                    <p class="card-text"><small class="text-muted">藝人</small></p>
+                    <a asp-action="AritstDetail" asp-controller="Music" asp-route-ArtistID="@item.Artist.Id" class="btn btn-primary">來去聆聽</a>
+                </div>
+            </div>
+        </div>
+    }
+  
+</div>

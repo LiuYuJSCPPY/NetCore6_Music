@@ -4,6 +4,9 @@ using Core6Music.Web.Models;
 using Core6Music.Web.DateContext;
 using NToastNotify;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
+using Core6Music.Web.ViewModels;
+using NuGet.ContentModel;
 
 namespace Core6Music.Web.Controllers
 {
@@ -23,10 +26,7 @@ namespace Core6Music.Web.Controllers
             _musicDateContext = musicDateContext;
             _toastNotification = toastNotification;
         }
-        public IActionResult Index()
-        {
-            return View();
-        }
+  
 
         public async Task<IActionResult> FavoriteAlbum()
         {
@@ -34,7 +34,7 @@ namespace Core6Music.Web.Controllers
             if (_SignInManager.IsSignedIn(User))
             {
                 IdentityUser sUser = await _userManager.GetUserAsync(User);
-                var AllFavoriteAlbum = await _musicDateContext.FavoriteAlbums.Where(x => x.MusicUserId == sUser.Id).ToArrayAsync();
+                var AllFavoriteAlbum = await _musicDateContext.FavoriteAlbums.Include(x =>x.Album).ThenInclude(x=> x.songs).Where(x => x.MusicUserId == sUser.Id).ToListAsync();
                 return View(AllFavoriteAlbum);
             }
 
@@ -47,32 +47,190 @@ namespace Core6Music.Web.Controllers
             if (_SignInManager.IsSignedIn(User))
             {
                 IdentityUser sUser = await _userManager.GetUserAsync(User);
-                var AllFavoriteArtists = await _musicDateContext.FavoriteArtists.Where(x => x.MusicUserId == sUser.Id).ToArrayAsync();
+                var AllFavoriteArtists = await _musicDateContext.FavoriteArtists.Where(x => x.MusicUserId == sUser.Id).Include(x=>x.Artist).ThenInclude(x => x.artistHeadImages).ToListAsync();
                 return View(AllFavoriteArtists);
             }
             return RedirectToAction("Index", "Music");
         }
-        public async Task<IActionResult> FavoriteSongs()
+
+        public async Task<IActionResult> FavoriteSong()
         {
 
             if (_SignInManager.IsSignedIn(User))
             {
                 IdentityUser sUser = await _userManager.GetUserAsync(User);
-                var AllFavoriteSongs = await _musicDateContext.FavoriteSongs.Where(x => x.MusicUserId == sUser.Id).ToArrayAsync();
-                return View(AllFavoriteSongs);
+                var AllFavoriteArtists = await _musicDateContext.FavoriteSongs.Where(x => x.MusicUserId == sUser.Id).Include(x => x.Song).ToListAsync();
+                return View(AllFavoriteArtists);
             }
             return RedirectToAction("Index", "Music");
         }
 
+        public async Task<IActionResult> AllPlayList()
+        {
+            AllPlayListViewModels allPlayListViewModels = new AllPlayListViewModels();
+            if (_SignInManager.IsSignedIn(User))
+            {
+                IdentityUser AUser = await _userManager.GetUserAsync(User);
+
+                var MusicPlayList = await _musicDateContext.MusicManifests.Include(x => x.musicManifestSongs).Where(x => x.MusicUserId == AUser.Id).ToListAsync();
+
+                var favoriteMusic = await _musicDateContext.FavoriteSongs.Where(x => x.MusicUserId == AUser.Id).ToListAsync();
+                allPlayListViewModels.musicManifests = MusicPlayList;
+                allPlayListViewModels.favoriteSongs = favoriteMusic;
+                return View(allPlayListViewModels);
+            }
+
+            return RedirectToAction("Index", "Music");
+        }
+        public async Task<IActionResult> DetailPlayList(int Id ,string? SearchSong)
+        {
+            DetailPlayListViewModels detailPlayListViewModels = new DetailPlayListViewModels();
+            if (_SignInManager.IsSignedIn(User))
+            {
+                IdentityUser AUser = await _userManager.GetUserAsync(User);
+                var DetailPlayList = await _musicDateContext.MusicManifests.Include(x => x.musicManifestSongs)
+                    .Where(x => x.MusicUserId == AUser.Id)
+                    .Where(x => x.Id == Id)
+                    .FirstOrDefaultAsync();
+
+                var DetailPlayListSong = await _musicDateContext.MusicManifestSongs.
+                    Include(x => x.Song)
+                    .ThenInclude(x => x.favoriteSongs)
+                    .Include(x => x.Album)
+                    .Where(x => x.MusicManifestId == DetailPlayList.Id).ToArrayAsync();
+
+                if (SearchSong == null)
+                {
+                    detailPlayListViewModels.Songs = null;
+                }
+                else
+                {
+                    detailPlayListViewModels.Songs = await _musicDateContext.Songs.Include(x=> x.favoriteSongs).Include(x => x.Album).Where(x => x.Name == SearchSong).Take(10).ToListAsync();
+                }
+                detailPlayListViewModels.MusicManifest = DetailPlayList;
+                detailPlayListViewModels.MusicManifestSongs = DetailPlayListSong;
+
+
+                return View(detailPlayListViewModels);
+            }
+            return RedirectToAction("Index", "Music");
+
+        }
 
         public async Task<IActionResult> CreatePlayList()
         {
-            return View();
+            bool Result = false;
+            if (_SignInManager.IsSignedIn(User))
+            {
+                IdentityUser identityUser = await _userManager.GetUserAsync(User);
+                MusicManifest musicManifest = new MusicManifest
+                {
+                    MusicUserId = identityUser.Id,
+                };
+                _musicDateContext.Add(musicManifest);
+                Result = await _musicDateContext.SaveChangesAsync() > 0;
+            }
+
+            if (Result)
+            {
+                return Json(new { Success = true });
+            }
+            else
+            {
+                return Json(new { Success = false });
+            }
+            
+        }
+
+        public async Task<IActionResult> EditPlayList(int Id, [Bind("Name,Context")] MusicManifest musicManifest ,IFormFile formFile)
+        {
+            bool Result = false;
+            string FileName;
+            if (_SignInManager.IsSignedIn(User))
+            {
+                IdentityUser identityUser = await _userManager.GetUserAsync(User);
+                var PlayListEdit = await _musicDateContext.MusicManifests.Where(x => x.MusicUserId == identityUser.Id).Where(x => x.Id == Id).FirstOrDefaultAsync();
+
+                if(formFile == null)
+                {
+                    FileName = PlayListEdit.Image;
+                }
+                else
+                {
+                    string SPath = Path.Combine(_webHostEnvironment.WebRootPath, "Image/PlayList");
+                    if (!Directory.Exists(SPath))
+                    {
+                        Directory.CreateDirectory(SPath);
+                    }
+
+                    FileName = Guid.NewGuid().ToString() + "-" + formFile.FileName;
+                    string PathFile = Path.Combine(SPath, FileName);
+                    using (var steam = new FileStream(PathFile, FileMode.Create))
+                    {
+                        formFile.CopyTo(steam);
+                    }
+                }
+               
+
+                    MusicManifest EditmusicManifest = new MusicManifest
+                    {
+                        Id = Id,
+                        MusicUserId = identityUser.Id,
+                        Name= musicManifest.Name,
+                        Context = musicManifest.Context,
+                        Image = FileName
+                    };
+                _musicDateContext.Add(EditmusicManifest);
+                Result = await _musicDateContext.SaveChangesAsync() > 0;
+               
+            }
+            if (Result)
+            {
+                _toastNotification.AddSuccessToastMessage("成功!");
+                return Json(new { Success = true });
+            }
+            else
+            {
+                _toastNotification.AddSuccessToastMessage("失敗!");
+                return Json(new { Success = false });
+            }
+        }
+        public async Task<IActionResult> DeletePlayList(int Id)
+        {
+            bool Result = false;
+            if (_SignInManager.IsSignedIn(User))
+            {
+                IdentityUser user = await _userManager.GetUserAsync(User);
+                var DeletePlayList = await _musicDateContext.MusicManifests.Include(x => x.musicManifestSongs).Where(x => x.MusicUserId == user.Id).Where(x => x.Id == Id).FirstOrDefaultAsync();
+
+                if(DeletePlayList.Image != null)
+                {
+                    string DeleteImage = Path.Combine(_webHostEnvironment.WebRootPath, "Image/PlayList", DeletePlayList.Image);
+                    if (Directory.Exists(DeleteImage)){
+                        Directory.Delete(DeleteImage);
+                    };
+                };
+                
+
+                _musicDateContext.Remove(DeletePlayList);
+                Result = await _musicDateContext.SaveChangesAsync() > 0;
+
+
+            }
+            if (Result)
+            {
+                _toastNotification.AddSuccessToastMessage("成功!");
+                return RedirectToAction("AllPlayList");
+            }
+            else
+            {
+                _toastNotification.AddSuccessToastMessage("失敗!");
+                return Json(new { Success = false });
+            }
         }
 
 
-        
-        public async Task<IActionResult> AddorDeleteSongPlayList(int MusicMainfestId,int SongId)
+        public async Task<IActionResult> AddorDeleteSongPlayList(int MusicMainfestId,int SongId,string AlbumId)
         {
             var SongPlayList = await _musicDateContext.MusicManifestSongs.Include(x => x.MusicManifest).Where(x => x.MusicManifestId == MusicMainfestId).Where(x => x.SongId == SongId).FirstOrDefaultAsync();
             var PlayList = await _musicDateContext.MusicManifests.FirstOrDefaultAsync(x => x.Id == MusicMainfestId);
@@ -90,7 +248,8 @@ namespace Core6Music.Web.Controllers
                 MusicManifestSong CreatemusicManifestSong = new MusicManifestSong()
                 {
                     MusicManifestId = MusicMainfestId,
-                    SongId = SongId
+                    SongId = SongId,
+                    AlbumId = AlbumId,
                 };
                 _musicDateContext.Add(CreatemusicManifestSong);
                 Result = await _musicDateContext.SaveChangesAsync() > 0;
@@ -110,14 +269,14 @@ namespace Core6Music.Web.Controllers
         
 
         [HttpGet("Favorite/Album/{Id}")]
-        public async Task<IActionResult> AddFavoriteAlbum(string Id)
+        public async Task<IActionResult> AddorDeleteFavoriteAlbum(string Id)
         {
             bool result = false;
             
             if (_SignInManager.IsSignedIn(User))
             {
                 IdentityUser sUser = await _userManager.GetUserAsync(User);
-                var AFavoriteAlbum = await _musicDateContext.FavoriteAlbums.Where(x => x.MusicUserId == sUser.Id).Where(x => x.AlbumId == Id).FirstAsync();
+                var AFavoriteAlbum = await _musicDateContext.FavoriteAlbums.Where(x => x.MusicUserId == sUser.Id).Where(x => x.AlbumId == Id).FirstOrDefaultAsync();
                 if(AFavoriteAlbum != null)
                 {
                     _musicDateContext.Remove(AFavoriteAlbum);
@@ -156,7 +315,7 @@ namespace Core6Music.Web.Controllers
             if (_SignInManager.IsSignedIn(User))
             {
                 IdentityUser sUser = await _userManager.GetUserAsync(User);
-                var AFavoriteArtist = await _musicDateContext.FavoriteArtists.Where(x => x.MusicUserId == sUser.Id).Where(x => x.ArtistId == Id).FirstAsync();
+                var AFavoriteArtist = await _musicDateContext.FavoriteArtists.Where(x => x.MusicUserId == sUser.Id).Where(x => x.ArtistId == Id).FirstOrDefaultAsync();
                 if (AFavoriteArtist != null)
                 {
                     _musicDateContext.Remove(AFavoriteArtist);
@@ -197,7 +356,7 @@ namespace Core6Music.Web.Controllers
             if (_SignInManager.IsSignedIn(User))
             {
                 IdentityUser sUser = await _userManager.GetUserAsync(User);
-                var UFavoritesong = await _musicDateContext.FavoriteSongs.Where(x => x.MusicUserId == sUser.Id).Where(x => x.SongId == Id).FirstAsync();
+                var UFavoritesong = await _musicDateContext.FavoriteSongs.Where(x => x.MusicUserId == sUser.Id).Where(x => x.SongId == Id).FirstOrDefaultAsync();
                 if (UFavoritesong != null)
                 {
                     _musicDateContext.Remove(UFavoritesong);

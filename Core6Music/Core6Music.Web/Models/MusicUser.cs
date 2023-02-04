@@ -6,11 +6,11 @@ namespace Core6Music.Web.Models
 {
     public class MusicUser : IdentityUser
     {
-        public string FullName { get; set; }
-        public string MusicName { get; set; }
-        public DateTime BirthDay { get; set; }
-        public Male male { get; set; }
-        public City City { get; set; }
+        public string? FullName { get; set; }
+        public string? MusicName { get; set; }
+        public DateTime? BirthDay { get; set; }
+        public Male? male { get; set; }
+        public City? City { get; set; }
 
 
         public ICollection<FavoriteSong> favoriteSongs { get; set; }

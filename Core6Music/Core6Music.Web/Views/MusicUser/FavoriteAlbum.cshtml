@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Core6Music.Web.Models.FavoriteAlbum>
+@using Core6Music.Web.DateContext.Enum;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    string Path = "~/Image/Album/";
+}
+<div class="row row-cols-1 row-cols-md-6 g-4">
+    @foreach(var item in Model)
+    {
+        <div class="col">
+            <div class="card h-100 ">
+                <img src="@(Path + item.Album.Image)" asp-append-version="true" class="img-fluid rounded-start" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Album.Name</h5>
+                    <p class="card-text">@((AlbumCategory)item.Album.albumCategory)</p>
+                    <p class="card-text"><small class="text-muted">共有 @item.Album.songs.Count() 首</small></p>
+                    <a asp-action="AlbumDetail" asp-controller="Music" asp-route-AlbumId="@item.Album.Id" class="btn btn-primary">來去聆聽</a>
+                </div>
+            </div>
+        </div>
+    }
+ 
+    
+    <div class="col">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+        </div>
+    </div>
+
+</div>

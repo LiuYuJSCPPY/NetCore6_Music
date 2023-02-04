@@ -256,6 +256,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/0_MyDocument/Visual_Studio_2022/Projects/NetCore6_Music/Core6Music/Core6Music.Web/Views/MusicUser/AllPlayList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXVzaWNVc2VyXEFsbFBsYXlMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/0_MyDocument/Visual_Studio_2022/Projects/NetCore6_Music/Core6Music/Core6Music.Web/Views/MusicUser/DetailPlayList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXVzaWNVc2VyXERldGFpbFBsYXlMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/0_MyDocument/Visual_Studio_2022/Projects/NetCore6_Music/Core6Music/Core6Music.Web/Views/MusicUser/FavoriteAlbum.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXVzaWNVc2VyXEZhdm9yaXRlQWxidW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/0_MyDocument/Visual_Studio_2022/Projects/NetCore6_Music/Core6Music/Core6Music.Web/Views/MusicUser/FavoriteArtists.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXVzaWNVc2VyXEZhdm9yaXRlQXJ0aXN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/0_MyDocument/Visual_Studio_2022/Projects/NetCore6_Music/Core6Music/Core6Music.Web/Views/Music/AlbumDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXVzaWNcQWxidW1EZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

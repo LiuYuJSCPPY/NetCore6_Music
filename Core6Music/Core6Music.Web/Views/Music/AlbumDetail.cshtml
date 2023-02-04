@@ -22,11 +22,11 @@
             <h1 class="display-5 fw-bold">@Model.album.Name</h1>
             @if(Model.album.favoriteAlbums.FirstOrDefault() != null)
             {
-                <button onclick="FavoriteAlbum('@Url.Action("AddFavoriteAlbum","MusicUser",new{Id = Model.album.Id})')">取消關注</button>
+                <button onclick="FavoriteAlbum('@Url.Action("AddorDeleteFavoriteAlbum","MusicUser",new{Id = Model.album.Id})')">取消關注</button>
             }
             else
             {
-                <button onclick="FavoriteAlbum('@Url.Action("AddFavoriteAlbum","MusicUser",new{Id = Model.album.Id})')">關注</button>
+                <button onclick="FavoriteAlbum('@Url.Action("AddorDeleteFavoriteAlbum","MusicUser",new{Id = Model.album.Id})')">關注</button>
             }
             
            
@@ -150,6 +150,17 @@
                 url : url,
                 success: function(res){
                     if(res.Success){
+                        location.reload();
+                    }
+                }
+            })
+        }
+        FavoriteSong = (url) => {
+            $.ajax({
+                type: "get",
+                url: url,
+                success: function (res) {
+                    if (res.Success) {
                         location.reload();
                     }
                 }

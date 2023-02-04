@@ -202,6 +202,8 @@
     [].forEach.call(audios, function (i) {
         i.addEventListener("play", pauseAll.bind(i));
     })
+
+
     FavoriteSong = (url) =>{
         $.ajax({
             type:"get",

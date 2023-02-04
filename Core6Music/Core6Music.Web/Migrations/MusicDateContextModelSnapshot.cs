@@ -175,66 +175,75 @@ namespace Core6Music.Web.Migrations
 
             modelBuilder.Entity("Core6Music.Web.Models.FavoriteAlbum", b =>
                 {
-                    b.Property<string>("MusicUserId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("AlbumId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("MusicUserId1")
+                    b.Property<string>("MusicUserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.HasKey("MusicUserId");
+                    b.HasKey("Id");
 
                     b.HasIndex("AlbumId");
 
-                    b.HasIndex("MusicUserId1");
+                    b.HasIndex("MusicUserId");
 
                     b.ToTable("FavoriteAlbum", "dbo");
                 });
 
             modelBuilder.Entity("Core6Music.Web.Models.FavoriteArtist", b =>
                 {
-                    b.Property<string>("MusicUserId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("ArtistId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("MusicUserId1")
+                    b.Property<string>("MusicUserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.HasKey("MusicUserId");
+                    b.HasKey("Id");
 
                     b.HasIndex("ArtistId");
 
-                    b.HasIndex("MusicUserId1");
+                    b.HasIndex("MusicUserId");
 
                     b.ToTable("FavoriteArtist", "dbo");
                 });
 
             modelBuilder.Entity("Core6Music.Web.Models.FavoriteSong", b =>
                 {
-                    b.Property<string>("MusicUserId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("MusicUserId1")
+                    b.Property<string>("MusicUserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("SongId")
                         .HasColumnType("int");
 
-                    b.HasKey("MusicUserId");
+                    b.HasKey("Id");
 
-                    b.HasIndex("MusicUserId1");
+                    b.HasIndex("MusicUserId");
 
                     b.HasIndex("SongId");
 
@@ -277,6 +286,9 @@ namespace Core6Music.Web.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<string>("AlbumId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
@@ -287,6 +299,8 @@ namespace Core6Music.Web.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AlbumId");
 
                     b.HasIndex("MusicManifestId");
 
@@ -303,10 +317,10 @@ namespace Core6Music.Web.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("BirthDay")
+                    b.Property<DateTime?>("BirthDay")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("City")
+                    b.Property<int?>("City")
                         .HasColumnType("int");
 
                     b.Property<string>("ConcurrencyStamp")
@@ -321,7 +335,6 @@ namespace Core6Music.Web.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("FullName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("LockoutEnabled")
@@ -331,7 +344,6 @@ namespace Core6Music.Web.Migrations
                         .HasColumnType("datetimeoffset");
 
                     b.Property<string>("MusicName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NormalizedEmail")
@@ -361,7 +373,7 @@ namespace Core6Music.Web.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
-                    b.Property<int>("male")
+                    b.Property<int?>("male")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -648,7 +660,7 @@ namespace Core6Music.Web.Migrations
 
                     b.HasOne("Core6Music.Web.Models.MusicUser", "MusicUser")
                         .WithMany("favoriteAlbums")
-                        .HasForeignKey("MusicUserId1")
+                        .HasForeignKey("MusicUserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -667,7 +679,7 @@ namespace Core6Music.Web.Migrations
 
                     b.HasOne("Core6Music.Web.Models.MusicUser", "MusicUser")
                         .WithMany("favoriteArtists")
-                        .HasForeignKey("MusicUserId1")
+                        .HasForeignKey("MusicUserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -680,7 +692,7 @@ namespace Core6Music.Web.Migrations
                 {
                     b.HasOne("Core6Music.Web.Models.MusicUser", "MusicUser")
                         .WithMany("favoriteSongs")
-                        .HasForeignKey("MusicUserId1")
+                        .HasForeignKey("MusicUserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -708,6 +720,10 @@ namespace Core6Music.Web.Migrations
 
             modelBuilder.Entity("Core6Music.Web.Models.MusicManifestSong", b =>
                 {
+                    b.HasOne("Core6Music.Web.Models.Album", "Album")
+                        .WithMany("musicManifestSongs")
+                        .HasForeignKey("AlbumId");
+
                     b.HasOne("Core6Music.Web.Models.MusicManifest", "MusicManifest")
                         .WithMany("musicManifestSongs")
                         .HasForeignKey("MusicManifestId")
@@ -719,6 +735,8 @@ namespace Core6Music.Web.Migrations
                         .HasForeignKey("SongId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Album");
 
                     b.Navigation("MusicManifest");
 
@@ -807,6 +825,8 @@ namespace Core6Music.Web.Migrations
             modelBuilder.Entity("Core6Music.Web.Models.Album", b =>
                 {
                     b.Navigation("favoriteAlbums");
+
+                    b.Navigation("musicManifestSongs");
 
                     b.Navigation("songs");
                 });

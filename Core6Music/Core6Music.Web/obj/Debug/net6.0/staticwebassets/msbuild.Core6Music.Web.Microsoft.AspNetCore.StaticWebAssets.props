@@ -128,6 +128,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\Album\b5a102af-603f-4be7-87ad-8084057e882a-restaurant-1837150_1920.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\Album\c7220dce-0ec7-4feb-b083-c8a7f4163696-20150826042859_bdd1I.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Core6Music.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Core6Music.Web</BasePath>
+      <RelativePath>Image/Album/c7220dce-0ec7-4feb-b083-c8a7f4163696-20150826042859_bdd1I.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\Album\c7220dce-0ec7-4feb-b083-c8a7f4163696-20150826042859_bdd1I.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\Artist\BackImage\02d94ba6-85cf-4927-ab86-1d0824cdb162-23242834OIP (1).jfif))">
       <SourceType>Package</SourceType>
       <SourceId>Core6Music.Web</SourceId>
@@ -287,6 +303,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\Artist\BackImage\9fec6e13-528f-4497-9b49-bdd3f7d2dab7-23390157327033272_WxH.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\Artist\BackImage\b9ccdc78-f785-45be-80a5-9af093f28df8-23000454131136.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Core6Music.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Core6Music.Web</BasePath>
+      <RelativePath>Image/Artist/BackImage/b9ccdc78-f785-45be-80a5-9af093f28df8-23000454131136.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\Artist\BackImage\b9ccdc78-f785-45be-80a5-9af093f28df8-23000454131136.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\Artist\BackImage\be1c95de-b7ba-41b6-a3a7-c76202ed8ee1-23462801dea2a4a2b3245617fe393c3f2dac9bc1.jpg))">
       <SourceType>Package</SourceType>
@@ -480,6 +512,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\Artist\ContextImage\98c204db-b816-4781-90fe-e91efb1f2def-23202831OIP.jfif))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\Artist\ContextImage\ab47b373-23b2-4be1-8b10-fc5b341c4601-23000454131137.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Core6Music.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Core6Music.Web</BasePath>
+      <RelativePath>Image/Artist/ContextImage/ab47b373-23b2-4be1-8b10-fc5b341c4601-23000454131137.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\Artist\ContextImage\ab47b373-23b2-4be1-8b10-fc5b341c4601-23000454131137.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\Artist\ContextImage\aea65270-28f7-4dba-8523-9166a65c3b3b-23242834OIP.jfif))">
       <SourceType>Package</SourceType>
       <SourceId>Core6Music.Web</SourceId>
@@ -639,6 +687,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\Artist\HeadImage\cec0de37-88e3-4ee7-ab34-cd32d2fa6ac3-23282859OIP (1).jfif))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\Artist\HeadImage\d3ea16f5-fd1a-46b5-b30b-bc25e6ef7715-23000454131135.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Core6Music.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Core6Music.Web</BasePath>
+      <RelativePath>Image/Artist/HeadImage/d3ea16f5-fd1a-46b5-b30b-bc25e6ef7715-23000454131135.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\Artist\HeadImage\d3ea16f5-fd1a-46b5-b30b-bc25e6ef7715-23000454131135.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\Artist\HeadImage\decdc512-140a-4c0c-a1de-03d04b646ae7-23382832OIP.jfif))">
       <SourceType>Package</SourceType>
@@ -1727,6 +1791,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MP3\717ce750-4557-4a47-b2be-92c0546eff8ayt1s.com - 问篆.mp3))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MP3\8e33fb4d-b88e-4b09-aaec-d499d9dcae69yt1s.com - 问篆.mp3))">
+      <SourceType>Package</SourceType>
+      <SourceId>Core6Music.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Core6Music.Web</BasePath>
+      <RelativePath>MP3/8e33fb4d-b88e-4b09-aaec-d499d9dcae69yt1s.com - 问篆.mp3</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MP3\8e33fb4d-b88e-4b09-aaec-d499d9dcae69yt1s.com - 问篆.mp3))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MP3\8ff74229-fd29-476e-9e8e-e2c38f6b7fd9scott-buckley-ashes-of-a-fallen-year.mp3))">
       <SourceType>Package</SourceType>

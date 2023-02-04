@@ -12,6 +12,10 @@ namespace Core6Music.Web.Models
         public MusicManifest MusicManifest { get; set; }
         public int SongId { get; set; }
         public Song Song { get; set; }
+
+        public string? AlbumId { get; set; }
+        public Album Album { get; set; }
+
         public DateTime CreateDate { get; set; }
     }
 }
