@@ -142,6 +142,7 @@ namespace Core6Music.Web.Controllers
             
         }
 
+        [HttpPost]
         public async Task<IActionResult> EditPlayList(int Id, [Bind("Name,Context")] MusicManifest musicManifest ,IFormFile formFile)
         {
             bool Result = false;
@@ -149,7 +150,7 @@ namespace Core6Music.Web.Controllers
             if (_SignInManager.IsSignedIn(User))
             {
                 IdentityUser identityUser = await _userManager.GetUserAsync(User);
-                var PlayListEdit = await _musicDateContext.MusicManifests.Where(x => x.MusicUserId == identityUser.Id).Where(x => x.Id == Id).FirstOrDefaultAsync();
+                var PlayListEdit = await _musicDateContext.MusicManifests.AsNoTracking().Where(x => x.MusicUserId == identityUser.Id).Where(x => x.Id == Id).FirstOrDefaultAsync();
 
                 if(formFile == null)
                 {
@@ -180,7 +181,7 @@ namespace Core6Music.Web.Controllers
                         Context = musicManifest.Context,
                         Image = FileName
                     };
-                _musicDateContext.Add(EditmusicManifest);
+                _musicDateContext.Update(EditmusicManifest);
                 Result = await _musicDateContext.SaveChangesAsync() > 0;
                
             }

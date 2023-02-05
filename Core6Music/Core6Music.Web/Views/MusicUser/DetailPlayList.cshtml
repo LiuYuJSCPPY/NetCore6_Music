@@ -9,7 +9,7 @@
 @inject SignInManager<MusicUser> SignInManager;
 @{
     string AlbumPath = "~/Image/Album/";
-    string PlayListPath = "~/Image/PalyList/";
+    string PlayListPath = "~/Image/PlayList/";
     string Mp3Path = "~/MP3/";
     IdentityUser AUser = await UserManger.GetUserAsync(User);
     List<MusicManifestSong> AllSong = Model.MusicManifest.musicManifestSongs.ToList();
@@ -29,7 +29,41 @@
         <div class="container-fluid py-5">
             <h1 class="display-5 fw-bold">@Model.MusicManifest.Name</h1>
             <button onclick="DeletePlayList('@Url.Action("DeletePlayList",new {Id = Model.MusicManifest.Id})')">刪除播放清單</button>
-
+            
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#MusciContext">
+                播放清單更新
+            </button>
+            <div class="modal fade" id="MusciContext" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form asp-action="EditPlayList" asp-controller="MusicUser" asp-route-Id="@Model.MusicManifest.Id" enctype="multipart/form-data" method="post">
+                                <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">Recipient:</label>
+                                    <input type="text" name="Name" class="form-control" id="recipient-name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message-text" class="col-form-label">Message:</label>
+                                    <textarea class="form-control" name="Context" id="message-text"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message-text" class="col-form-label">Message:</label>
+                                    <input class="form-control" type="file" name="formFile" id="">
+                                </div>
+                                <input type="submit" value="Create" class="btn btn-primary" />
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Send message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
             <img asp-append-version="true" width="500px" height="300px" src="@(PlayListPath + Model.MusicManifest.Image)" />
@@ -110,29 +144,31 @@
                             </div>
                         </td>
 
-                        @if (item.Song.favoriteSongs.Where(x => x.MusicUserId == AUser.Id).Where(x => x.SongId == item.Id).FirstOrDefault() != null)
-                        {
-                            <td>
-                                <div>
-                                    <button onclick="FavoriteSong(@Url.Action("AddorDeleteFavoriteSong","MusicUser",new{Id = item.Id}))">取消喜歡</button> FavoriteSong
-                                </div>
-                            </td>
-                        }
-                        else
-                        {
-                            <td>
-                                <div>
-                                    <button onclick="FavoriteSong('@Url.Action("AddorDeleteFavoriteSong","MusicUser",new{Id = item.Id})')">喜歡</button> FavoriteSong
-                                </div>
-                            </td>
-                        }
 
+                        @if (item.Song.favoriteSongs.Where(x => x.MusicUserId == AUser.Id).Where(x => x.SongId == item.Id).FirstOrDefault() != null)
+                            {
+                                <td>
+                                    <div>
+                                        <button onclick="FavoriteSong(@Url.Action("AddorDeleteFavoriteSong","MusicUser",new{Id = item.Id}))">取消喜歡</button> FavoriteSong
+                                    </div>
+                                </td>
+                            }
+                            else
+                            {
+                                <td>
+                                    <div>
+                                        <button onclick="FavoriteSong('@Url.Action("AddorDeleteFavoriteSong","MusicUser",new{Id = item.Id})')">喜歡</button> FavoriteSong
+                                    </div>
+                                </td>
+                            }
+                        
                         @*刪除歌曲*@
                         @if (Model.MusicManifest.MusicUserId == AUser.Id)
                         {
                             <td>
                                 <div>
-                                    <button onclick="AddorDeleteSongPlayList('@Url.Action("AddorDeleteSongPlayList","MusicUser",new{SongId = item.Id ,MusicMainfestId = Model.MusicManifest.Id,AlbumId = item.AlbumId})')">刪除歌曲</button>
+                                    <button onclick="AddorDeleteSongPlayList('@Url.Action("AddorDeleteSongPlayList","MusicUser",new{SongId = item.Song.Id ,MusicMainfestId = Model.MusicManifest.Id,AlbumId=item.AlbumId})')">取消歌曲</button>
+                                    
                                 </div>
                             </td>
                         }
@@ -184,7 +220,7 @@
                                 <div class="container bd-example-row text-center">
                                     <div class="row">
                                         <div class="text-center col">
-                                            <img src="" width="40px" height="40px" asp-append-version="true">
+                                                <img src="@(AlbumPath + item.Album.Image)" width="40px" height="40px" asp-append-version="true">
 
                                         </div>
 
@@ -289,7 +325,9 @@
                 type:"get",
                 url:url,
                 success:function(res){
+                    debugger;
                     if(res.Success){
+                        debugger;
                         location.reload();
                     }
                 }
