@@ -28,9 +28,36 @@
  * 專輯歌曲頁面 : 專輯裡面所有歌曲(新增、更新、刪除)。
  
  ## 展示專案圖片 : 
-    * 前端頁面 ( 未使用會員 ) :
- 1. 首頁 :
-        1. 
+ **前端頁面(未使用會員):**
+1. 首頁 :
+   1. 挑出10個專輯。
+   2. 挑出10個藝人。
+   3. 首頁中有打招呼 (12點以前 : 早安 、 12點至17點 : 午安 、 17點以後 : 晚安 ) 。
 ![image](https://github.com/LiuYuJSCPPY/NetCore6_Music/blob/main/Iamge/%E9%A6%96%E9%A0%81.PNG)
+
+2. 單專輯頁面:
+   1.  單個專輯頁面該專輯的歌曲。
+![image](https://github.com/LiuYuJSCPPY/NetCore6_Music/blob/main/Iamge/%E6%9C%AA%E7%99%BB%E5%85%A5%E5%89%8D%E5%8F%B0%E5%B0%88%E8%BC%AF.PNG)
   
-  首頁 : 在首頁中掏出10個專輯以及藝人作為首頁，首頁中有打招呼 (12點以前 : 早安 、 12點至17點 : 午安 、 17點以後 : 晚安 ) 。
+3. 藝人頁面 : 
+   1.  藝人的頁面中會有藝人的專輯、熱門的歌曲以及藝人的個人資料。
+![image](https://github.com/LiuYuJSCPPY/NetCore6_Music/blob/main/Iamge/%E6%9C%AA%E7%99%BB%E5%85%A5%E5%89%8D%E5%8F%B0%E8%97%9D%E4%BA%BA1.PNG)
+![image](https://github.com/LiuYuJSCPPY/NetCore6_Music/blob/main/Iamge/%E6%9C%AA%E7%99%BB%E5%85%A5%E5%89%8D%E5%8F%B0%E8%97%9D%E4%BA%BA2.PNG)
+![image](https://github.com/LiuYuJSCPPY/NetCore6_Music/blob/main/Iamge/%E6%9C%AA%E7%99%BB%E5%85%A5%E5%89%8D%E5%8F%B0%E8%97%9D%E4%BA%BA3.PNG)
+4. 藝人所有專輯 : 
+   1.  藝人所有專輯頁面所有專輯的歌曲。
+![image](https://github.com/LiuYuJSCPPY/NetCore6_Music/blob/main/Iamge/%E6%9C%AA%E7%99%BB%E5%85%A5%E8%97%9D%E4%BA%BA%E6%89%80%E6%9C%89%E5%B0%88%E8%BC%AF.PNG)
+  
+  **前端頁面(使用會員):**
+  
+  
+  ## 前端使用範例影片
+  
+
+
+https://user-images.githubusercontent.com/73396015/218117717-8859fedd-73dc-46c3-a360-f787e9770fc1.mp4
+
+## 後端使用範例影片
+
+https://user-images.githubusercontent.com/73396015/218117815-0ebe24f3-f663-43d2-a432-a4f6d9316d1d.mp4
+
