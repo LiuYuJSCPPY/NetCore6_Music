@@ -20,14 +20,18 @@
     <div class="p-5 mb-4 bg-light rounded-3">
         <div class="container-fluid py-5">
             <h1 class="display-5 fw-bold">@Model.album.Name</h1>
-            @if(Model.album.favoriteAlbums.FirstOrDefault() != null)
+            @if (user != null)
             {
-                <button onclick="FavoriteAlbum('@Url.Action("AddorDeleteFavoriteAlbum","MusicUser",new{Id = Model.album.Id})')">取消關注</button>
+                @if(Model.album.favoriteAlbums.FirstOrDefault() != null)
+                {
+                    <button onclick="FavoriteAlbum('@Url.Action("AddorDeleteFavoriteAlbum","MusicUser",new{Id = Model.album.Id})')">取消關注</button>
+                }
+                else
+                {
+                    <button onclick="FavoriteAlbum('@Url.Action("AddorDeleteFavoriteAlbum","MusicUser",new{Id = Model.album.Id})')">關注</button>
+                } 
             }
-            else
-            {
-                <button onclick="FavoriteAlbum('@Url.Action("AddorDeleteFavoriteAlbum","MusicUser",new{Id = Model.album.Id})')">關注</button>
-            }
+          
             
            
             <img asp-append-version="true" width="500px" height="300px" src="@(AbPath + Model.album.Image)" />
@@ -102,23 +106,26 @@
                                 @item.SongTime.Minutes : @item.SongTime.Seconds
                             </div>
                         </td>
-
-                        @if (item.favoriteSongs.Where(x => x.MusicUserId == user.Id).Where(x => x.SongId == item.Id).FirstOrDefault() != null)
+                        @if(user != null)
                         {
-                            <td>
-                                <div>
-                                    <button onclick="FavoriteSong(@Url.Action("AddorDeleteFavoriteSong","MusicUser",new{Id = item.Id}))">取消喜歡</button> FavoriteSong
-                                </div>
-                            </td>
+                              @if (item.favoriteSongs.Where(x => x.MusicUserId == user.Id).Where(x => x.SongId == item.Id).FirstOrDefault() != null)
+                            {
+                                <td>
+                                    <div>
+                                        <button onclick="FavoriteSong('@Url.Action("AddorDeleteFavoriteSong","MusicUser",new{Id = item.Id})')">取消喜歡</button> FavoriteSong
+                                    </div>
+                                </td>
+                            }
+                            else
+                            {
+                                <td>
+                                    <div>
+                                        <button onclick="FavoriteSong('@Url.Action("AddorDeleteFavoriteSong","MusicUser",new{Id = item.Id})')">喜歡</button> FavoriteSong
+                                    </div>
+                                </td>
+                            }  
                         }
-                        else
-                        {
-                            <td>
-                                <div>
-                                    <button onclick="FavoriteSong('@Url.Action("AddorDeleteFavoriteSong","MusicUser",new{Id = item.Id})')">喜歡</button> FavoriteSong
-                                </div>
-                            </td>
-                        }
+                        
                     </tr>
                 }
 
@@ -149,7 +156,7 @@
                 type:"get",
                 url : url,
                 success: function(res){
-                    if(res.Success){
+                    if(res.success){
                         location.reload();
                     }
                 }
@@ -160,7 +167,7 @@
                 type: "get",
                 url: url,
                 success: function (res) {
-                    if (res.Success) {
+                    if (res.success) {
                         location.reload();
                     }
                 }

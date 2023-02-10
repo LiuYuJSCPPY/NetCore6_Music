@@ -35,7 +35,7 @@
                 <div class="container bd-example-row text-center">
                     <div class="row ">
                         <div class="text-center col" >
-                            <img src="@(BPath+item.artistBackImages.ImageName)" width="100%" height="100%"asp-append-version="true" style="border-radius:50%">
+                                <img src="@(BPath+item.artistBackImages.ImageName)" width="100%" height="250px" asp-append-version="true" style="border-radius:50%">
                         </div>
                         <div class="text-center col text-center">
                                 <p>@item.Name</p>
@@ -65,9 +65,23 @@
                                             <div class="md-16">@item.Context</div>
                                         </div>
                                         <ul class="list-group list-group-flush">
-                                            <li class="list-group-item"><a href="@item.FaceBook">FaceBook</a></li>
-                                            <li class="list-group-item"><a href="@item.Instagram">Instagram</a></li>
-                                            <li class="list-group-item"><a href="@item.Wikipedia">Instagram</a></li>
+                                            @if (item.FaceBook != null)
+                                            {
+                                                <li class="list-group-item"><a href="@item.FaceBook">FaceBook</a></li>
+                                            }
+                                            @if (item.Instagram != null)
+                                            {
+                                                <li class="list-group-item"><a href="@item.Instagram">Instagram</a></li>
+                                            }
+                                             @if (item.Twitter != null)
+                                            {
+                                                <li class="list-group-item"><a href="@item.Twitter">Twitter</a></li>
+                                            }
+                                            @if (item.Wikipedia != null)
+                                            {
+                                                <li class="list-group-item"><a href="@item.Wikipedia">Wikipedia</a></li>
+                                            }
+
                                         </ul>
                                     </div>
                                 </div>
@@ -93,7 +107,7 @@
 
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+               
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>

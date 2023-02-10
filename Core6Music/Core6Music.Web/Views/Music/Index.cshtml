@@ -22,7 +22,7 @@ else if (dateTime.Hour > 12 && dateTime.Hour < 17){
 @foreach(var item in Model.albums){
      <div class="col">
             <div class="card" style="width: 18rem;">
-                <img src="@(AbiumPath+item.Image)" asp-append-version="true" class="card-img-top"/>
+                <img src="@(AbiumPath+item.Image)"width="100px" height="300px"  asp-append-version="true" class="card-img-top"/>
                 <div class="card-body">
                     <h5 class="card-title">@item.Name</h5>
                     <p class="card-text">@((AlbumCategory)item.albumCategory)</p>
@@ -38,7 +38,16 @@ else if (dateTime.Hour > 12 && dateTime.Hour < 17){
     {
     <div class="col">
         <div class="card" style="width: 18rem;">
-            <img src="@(HeadArtistPath+item.artistHeadImages.ImageName)" asp-append-version="true" class="card-img-top" />
+                @if (item.artistHeadImages != null)
+                {
+                    <img src="@(HeadArtistPath+item.artistHeadImages.ImageName)"width="100px" height="300px"  asp-append-version="true" class="card-img-top" />
+                }
+                else
+                {
+                   <img src="" asp-append-version="true" class="card-img-top" />
+                }
+                
+         
             <div class="card-body">
                 <h5 class="card-title">@item.Name</h5>
                 

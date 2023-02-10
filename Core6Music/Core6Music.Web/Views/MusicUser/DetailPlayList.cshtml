@@ -10,7 +10,7 @@
 @{
     string AlbumPath = "~/Image/Album/";
     string PlayListPath = "~/Image/PlayList/";
-    string Mp3Path = "~/MP3/";
+    string Mp3Path = "/MP3/";
     IdentityUser AUser = await UserManger.GetUserAsync(User);
     List<MusicManifestSong> AllSong = Model.MusicManifest.musicManifestSongs.ToList();
     TimeSpan TotalSongTime = new TimeSpan() ;
@@ -145,11 +145,11 @@
                         </td>
 
 
-                        @if (item.Song.favoriteSongs.Where(x => x.MusicUserId == AUser.Id).Where(x => x.SongId == item.Id).FirstOrDefault() != null)
+                        @if (item.Song.favoriteSongs.Where(x => x.MusicUserId == AUser.Id).Where(x => x.SongId == item.SongId).FirstOrDefault() != null)
                             {
                                 <td>
                                     <div>
-                                        <button onclick="FavoriteSong(@Url.Action("AddorDeleteFavoriteSong","MusicUser",new{Id = item.Id}))">取消喜歡</button> FavoriteSong
+                                    <button onclick="FavoriteSong(@Url.Action("AddorDeleteFavoriteSong","MusicUser",new{Id = item.SongId}))">取消喜歡</button> FavoriteSong
                                     </div>
                                 </td>
                             }
@@ -157,7 +157,7 @@
                             {
                                 <td>
                                     <div>
-                                        <button onclick="FavoriteSong('@Url.Action("AddorDeleteFavoriteSong","MusicUser",new{Id = item.Id})')">喜歡</button> FavoriteSong
+                                    <button onclick="FavoriteSong('@Url.Action("AddorDeleteFavoriteSong","MusicUser",new{Id = item.SongId})')">喜歡</button> FavoriteSong
                                     </div>
                                 </td>
                             }
@@ -269,7 +269,7 @@
                             {
                                 <td>
                                     <div>
-                                        <button onclick="FavoriteSong(@Url.Action("AddorDeleteFavoriteSong","MusicUser",new{Id = item.Id}))">取消喜歡</button> FavoriteSong
+                                        <button onclick="FavoriteSong('@Url.Action("AddorDeleteFavoriteSong","MusicUser",new{Id = item.Id})')">取消喜歡</button> FavoriteSong
                                     </div>
                                 </td>
                             }
@@ -326,7 +326,7 @@
                 url:url,
                 success:function(res){
                     debugger;
-                    if(res.Success){
+                    if (res.Success) {
                         debugger;
                         location.reload();
                     }
@@ -353,7 +353,7 @@
                 contentType: false,
                 processData: false,
                 success: function (res){
-                    if(res.Success){
+                    if (res.Success) {
                         location.reload();
                     }
                 }
@@ -365,6 +365,7 @@
                 url: url,
                 success: function (res) {
                     if (res.Success) {
+                        debugger;
                         location.reload();
                     }
                 }

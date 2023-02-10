@@ -209,7 +209,7 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
 
                     if (Result && editArtistViewModel.ArtistBackImage != null)
                     {
-                        ArtistBackImage artistBackImage = _context.ArtistBackImages.FirstOrDefault(x => x.ArtistId == EditArtist.Id);
+                        ArtistBackImage artistBackImage = _context.ArtistBackImages.AsNoTracking().FirstOrDefault(x => x.ArtistId == EditArtist.Id);
                         if (artistBackImage != null)
                         {
                             string DeletePath = Path.Combine(_webHostEnvironment.WebRootPath, "Image/Artist/BackImage", artistBackImage.ImageName);
@@ -241,7 +241,7 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
 
                     if (Result && editArtistViewModel.ArtistContextImage != null)
                     {
-                        ArtistContextImage artistContextImage = _context.ArtistContextImages.FirstOrDefault(x => x.ArtistId == EditArtist.Id);
+                        ArtistContextImage artistContextImage = _context.ArtistContextImages.AsNoTracking().FirstOrDefault(x => x.ArtistId == EditArtist.Id);
                         if(artistContextImage != null)
                         {
                             string DeletePath = Path.Combine(_webHostEnvironment.WebRootPath, "Image/Artist/ContextImage", artistContextImage.ImageName);
@@ -274,7 +274,7 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
 
                     if (Result && editArtistViewModel.ArtistHeadImage != null)
                     {
-                        ArtistHeadImage artistHeadImage = _context.ArtistHeadImages.FirstOrDefault(x => x.ArtistId == EditArtist.Id);
+                        ArtistHeadImage artistHeadImage = _context.ArtistHeadImages.AsNoTracking().FirstOrDefault(x => x.ArtistId == EditArtist.Id);
                         if(artistHeadImage != null)
                         {
                             string DeletePath = Path.Combine(_webHostEnvironment.WebRootPath, "Image/Artist/HeadImage", artistHeadImage.ImageName);
@@ -293,7 +293,7 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
                         }
 
 
-                        string EditImageName = _artist.SaveImage(editArtistViewModel.ArtistBackImage, "HeadImage");
+                        string EditImageName = _artist.SaveImage(editArtistViewModel.ArtistHeadImage, "HeadImage");
                         ArtistHeadImage EditArtistHeadImage = new ArtistHeadImage();
                         EditArtistHeadImage.Id = artistHeadImage.Id;
                         EditArtistHeadImage.ArtistId = EditArtist.Id;

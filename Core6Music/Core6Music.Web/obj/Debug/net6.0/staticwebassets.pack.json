@@ -17,8 +17,16 @@
       "PackagePath": "staticwebassets\\Image\\Album\\10d6cc2e-581f-4d22-8676-a4867d7f55ae-pexels-hassan-ouajbir-1860160.jpg"
     },
     {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Album\\59ea7d80-38af-42dd-800d-9263e37786fc-131137.jpg",
+      "PackagePath": "staticwebassets\\Image\\Album\\59ea7d80-38af-42dd-800d-9263e37786fc-131137.jpg"
+    },
+    {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Album\\5b99aea9-d155-4274-be67-a7de3b586160-dea2a4a2b3245617fe393c3f2dac9bc1.jpg",
       "PackagePath": "staticwebassets\\Image\\Album\\5b99aea9-d155-4274-be67-a7de3b586160-dea2a4a2b3245617fe393c3f2dac9bc1.jpg"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Album\\a568f232-a48d-4c94-a708-22daebab9199-131933.jpg",
+      "PackagePath": "staticwebassets\\Image\\Album\\a568f232-a48d-4c94-a708-22daebab9199-131933.jpg"
     },
     {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Album\\b37d05f3-8803-43ed-905b-353924cacfa5-OIP (2).jfif",
@@ -29,8 +37,20 @@
       "PackagePath": "staticwebassets\\Image\\Album\\b3eed414-4b27-400b-97aa-bfbf3308a4c7-OIP (2).jfif"
     },
     {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Album\\b4e73de3-df52-41bd-b1b6-893c537a7459-131932.jpg",
+      "PackagePath": "staticwebassets\\Image\\Album\\b4e73de3-df52-41bd-b1b6-893c537a7459-131932.jpg"
+    },
+    {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Album\\b5a102af-603f-4be7-87ad-8084057e882a-restaurant-1837150_1920.jpg",
       "PackagePath": "staticwebassets\\Image\\Album\\b5a102af-603f-4be7-87ad-8084057e882a-restaurant-1837150_1920.jpg"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Album\\b94a2d80-edc1-493e-940a-e7ed867c78e2-131946.jpg",
+      "PackagePath": "staticwebassets\\Image\\Album\\b94a2d80-edc1-493e-940a-e7ed867c78e2-131946.jpg"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Album\\c11696c3-8e81-41a0-a8e7-9acb50068167-131942.jpg",
+      "PackagePath": "staticwebassets\\Image\\Album\\c11696c3-8e81-41a0-a8e7-9acb50068167-131942.jpg"
     },
     {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Album\\c7220dce-0ec7-4feb-b083-c8a7f4163696-20150826042859_bdd1I.jpg",
@@ -41,12 +61,20 @@
       "PackagePath": "staticwebassets\\Image\\Artist\\BackImage\\02d94ba6-85cf-4927-ab86-1d0824cdb162-23242834OIP (1).jfif"
     },
     {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\07b95fb7-9360-4e5d-abc3-4d8d619f77e2-23171012131937.jpg",
+      "PackagePath": "staticwebassets\\Image\\Artist\\BackImage\\07b95fb7-9360-4e5d-abc3-4d8d619f77e2-23171012131937.jpg"
+    },
+    {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\24445b95-7354-4b26-a7c3-6dc5cefec5d3-23442825OIP (1).jfif",
       "PackagePath": "staticwebassets\\Image\\Artist\\BackImage\\24445b95-7354-4b26-a7c3-6dc5cefec5d3-23442825OIP (1).jfif"
     },
     {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\2d00dfaa-8662-48bb-8951-879b23575368-23032918dea2a4a2b3245617fe393c3f2dac9bc1.jpg",
       "PackagePath": "staticwebassets\\Image\\Artist\\BackImage\\2d00dfaa-8662-48bb-8951-879b23575368-23032918dea2a4a2b3245617fe393c3f2dac9bc1.jpg"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\45592780-96d7-42a7-aff0-b36e25ff0a9e-23161001131937.jpg",
+      "PackagePath": "staticwebassets\\Image\\Artist\\BackImage\\45592780-96d7-42a7-aff0-b36e25ff0a9e-23161001131937.jpg"
     },
     {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\572e4c2d-b9ff-46a8-99d5-85cc441334cd-23202827OIP.jfif",
@@ -85,12 +113,24 @@
       "PackagePath": "staticwebassets\\Image\\Artist\\BackImage\\be1c95de-b7ba-41b6-a3a7-c76202ed8ee1-23462801dea2a4a2b3245617fe393c3f2dac9bc1.jpg"
     },
     {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\c1ee484c-cb0b-4282-87e8-f4b3ca949735-23311005131947.jpg",
+      "PackagePath": "staticwebassets\\Image\\Artist\\BackImage\\c1ee484c-cb0b-4282-87e8-f4b3ca949735-23311005131947.jpg"
+    },
+    {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\c85a41a3-f529-4367-b765-9fce15b540c5-23373156R.jfif",
       "PackagePath": "staticwebassets\\Image\\Artist\\BackImage\\c85a41a3-f529-4367-b765-9fce15b540c5-23373156R.jfif"
     },
     {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\d5b0674d-51b5-40b2-a949-1ce25cbf7433-23312822OIP.jfif",
       "PackagePath": "staticwebassets\\Image\\Artist\\BackImage\\d5b0674d-51b5-40b2-a949-1ce25cbf7433-23312822OIP.jfif"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\e0777849-6c95-4b17-b586-f79c69fd8a2c-23291054131935.jpg",
+      "PackagePath": "staticwebassets\\Image\\Artist\\BackImage\\e0777849-6c95-4b17-b586-f79c69fd8a2c-23291054131935.jpg"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\BackImage\\f600f07a-5dc3-401b-8074-c217bcbbbbf5-23341009131944.jpg",
+      "PackagePath": "staticwebassets\\Image\\Artist\\BackImage\\f600f07a-5dc3-401b-8074-c217bcbbbbf5-23341009131944.jpg"
     },
     {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\ContextImage\\11f9140d-1311-46ec-a565-7df0ec35ed50-23390157OIP.jfif",
@@ -117,8 +157,24 @@
       "PackagePath": "staticwebassets\\Image\\Artist\\ContextImage\\5faf0639-a89f-45f6-858c-d95f004202f9-23312847OIP.jfif"
     },
     {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\ContextImage\\6b702b69-1e2d-42d1-a8cf-209687dacc4f-23341009131932.jpg",
+      "PackagePath": "staticwebassets\\Image\\Artist\\ContextImage\\6b702b69-1e2d-42d1-a8cf-209687dacc4f-23341009131932.jpg"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\ContextImage\\75226d43-dbba-4ff5-9ce0-3f845eb4581a-23291054131932.jpg",
+      "PackagePath": "staticwebassets\\Image\\Artist\\ContextImage\\75226d43-dbba-4ff5-9ce0-3f845eb4581a-23291054131932.jpg"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\ContextImage\\7638ef61-db20-46dd-ac9e-6e445ce15c28-23321026131934.jpg",
+      "PackagePath": "staticwebassets\\Image\\Artist\\ContextImage\\7638ef61-db20-46dd-ac9e-6e445ce15c28-23321026131934.jpg"
+    },
+    {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\ContextImage\\84e26cee-6095-4b4b-b0ad-1211790c40bd-23440119lobby-346426_1920.jpg",
       "PackagePath": "staticwebassets\\Image\\Artist\\ContextImage\\84e26cee-6095-4b4b-b0ad-1211790c40bd-23440119lobby-346426_1920.jpg"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\ContextImage\\90c201be-a6f1-4b2b-a814-1bbced05bf18-23231035131944.jpg",
+      "PackagePath": "staticwebassets\\Image\\Artist\\ContextImage\\90c201be-a6f1-4b2b-a814-1bbced05bf18-23231035131944.jpg"
     },
     {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\ContextImage\\972e4034-ee60-48b9-aa5b-f8b0428530a7-2337315619181cdd581ef6139e7f1cd6716607e9.jfif",
@@ -135,6 +191,26 @@
     {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\ContextImage\\aea65270-28f7-4dba-8523-9166a65c3b3b-23242834OIP.jfif",
       "PackagePath": "staticwebassets\\Image\\Artist\\ContextImage\\aea65270-28f7-4dba-8523-9166a65c3b3b-23242834OIP.jfif"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\ContextImage\\b18ad0af-95ca-46a6-ab67-6d2e23fde042-23311005131935.jpg",
+      "PackagePath": "staticwebassets\\Image\\Artist\\ContextImage\\b18ad0af-95ca-46a6-ab67-6d2e23fde042-23311005131935.jpg"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\ContextImage\\b89911b3-afcd-4d8e-ab58-e0e0c1963ef9-23181055131937.jpg",
+      "PackagePath": "staticwebassets\\Image\\Artist\\ContextImage\\b89911b3-afcd-4d8e-ab58-e0e0c1963ef9-23181055131937.jpg"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\ContextImage\\bdfa3077-6b5a-4a35-9f6a-c8dc5fabe2c5-23301016131935.jpg",
+      "PackagePath": "staticwebassets\\Image\\Artist\\ContextImage\\bdfa3077-6b5a-4a35-9f6a-c8dc5fabe2c5-23301016131935.jpg"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\ContextImage\\ec714892-4ae8-41a5-b1d6-6611a9e985a4-23341009131932.jpg",
+      "PackagePath": "staticwebassets\\Image\\Artist\\ContextImage\\ec714892-4ae8-41a5-b1d6-6611a9e985a4-23341009131932.jpg"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\ContextImage\\fbfb4d3d-9e1c-4e7e-b33e-ce6d2db37c67-23321012131934.jpg",
+      "PackagePath": "staticwebassets\\Image\\Artist\\ContextImage\\fbfb4d3d-9e1c-4e7e-b33e-ce6d2db37c67-23321012131934.jpg"
     },
     {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\HeadImage\\058cb724-b43b-4a2b-b89e-362ec7740daa-23042851ArtistHeadImage",
@@ -157,6 +233,10 @@
       "PackagePath": "staticwebassets\\Image\\Artist\\HeadImage\\4b640e20-456d-4a94-ba3c-3732d254eee2-23442836OIP (1).jfif"
     },
     {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\HeadImage\\815afd5c-13a1-4174-abc2-9c500a2274d9-23291055131947.jpg",
+      "PackagePath": "staticwebassets\\Image\\Artist\\HeadImage\\815afd5c-13a1-4174-abc2-9c500a2274d9-23291055131947.jpg"
+    },
+    {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\HeadImage\\8abcd158-1f8e-4582-aa99-eb896416f8aa-23202833OIP (1).jfif",
       "PackagePath": "staticwebassets\\Image\\Artist\\HeadImage\\8abcd158-1f8e-4582-aa99-eb896416f8aa-23202833OIP (1).jfif"
     },
@@ -169,6 +249,10 @@
       "PackagePath": "staticwebassets\\Image\\Artist\\HeadImage\\b3b85c21-ada7-4ec3-8a01-e96147e9308c-23390157327033272_WxH.jpg"
     },
     {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\HeadImage\\c125b565-e6ad-4724-a684-fc3a557ab5d0-23121041131947.jpg",
+      "PackagePath": "staticwebassets\\Image\\Artist\\HeadImage\\c125b565-e6ad-4724-a684-fc3a557ab5d0-23121041131947.jpg"
+    },
+    {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\HeadImage\\cec0de37-88e3-4ee7-ab34-cd32d2fa6ac3-23282859OIP (1).jfif",
       "PackagePath": "staticwebassets\\Image\\Artist\\HeadImage\\cec0de37-88e3-4ee7-ab34-cd32d2fa6ac3-23282859OIP (1).jfif"
     },
@@ -179,6 +263,18 @@
     {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\HeadImage\\decdc512-140a-4c0c-a1de-03d04b646ae7-23382832OIP.jfif",
       "PackagePath": "staticwebassets\\Image\\Artist\\HeadImage\\decdc512-140a-4c0c-a1de-03d04b646ae7-23382832OIP.jfif"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\HeadImage\\f18acdcb-40cd-41b4-8998-13ff245ad10b-23251058131937.jpg",
+      "PackagePath": "staticwebassets\\Image\\Artist\\HeadImage\\f18acdcb-40cd-41b4-8998-13ff245ad10b-23251058131937.jpg"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\Artist\\HeadImage\\f42853a2-f617-40c1-8bd5-6071be55656b-23191008131937.jpg",
+      "PackagePath": "staticwebassets\\Image\\Artist\\HeadImage\\f42853a2-f617-40c1-8bd5-6071be55656b-23191008131937.jpg"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\PlayList\\10da7b65-5ff2-450d-9d96-bd7e432f0928-131947.jpg",
+      "PackagePath": "staticwebassets\\Image\\PlayList\\10da7b65-5ff2-450d-9d96-bd7e432f0928-131947.jpg"
     },
     {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\PlayList\\1586874a-da25-48f2-8419-c298a9bc7d30-螢幕擷取畫面 (1).png",
@@ -195,6 +291,10 @@
     {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\PlayList\\b02224ee-eb4c-47be-95c5-bd6fbc064483-螢幕擷取畫面 (1).png",
       "PackagePath": "staticwebassets\\Image\\PlayList\\b02224ee-eb4c-47be-95c5-bd6fbc064483-螢幕擷取畫面 (1).png"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\Image\\PlayList\\e4f5bb00-7860-4b72-9f9b-6620027b6d64-擷取.PNG",
+      "PackagePath": "staticwebassets\\Image\\PlayList\\e4f5bb00-7860-4b72-9f9b-6620027b6d64-擷取.PNG"
     },
     {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\MP3\\00d185fc-f027-4f7c-be85-318837b40888kevin-macleod-johann-pachelbel-canon-in-d-for-two-renaissance-harps.mp3",
@@ -243,6 +343,10 @@
     {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\MP3\\alexander-nakarada-brothers-in-arms.mp3",
       "PackagePath": "staticwebassets\\MP3\\alexander-nakarada-brothers-in-arms.mp3"
+    },
+    {
+      "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\MP3\\b2348725-2ca5-47f0-b455-649de4eca2b3BLACKPINK_Forever_Young_Lyrics__Forever_Young__Color_Coded_Lyrics_Han_Rom_Ina.mp3",
+      "PackagePath": "staticwebassets\\MP3\\b2348725-2ca5-47f0-b455-649de4eca2b3BLACKPINK_Forever_Young_Lyrics__Forever_Young__Color_Coded_Lyrics_Han_Rom_Ina.mp3"
     },
     {
       "Id": "E:\\0_MyDocument\\Visual_Studio_2022\\Projects\\NetCore6_Music\\Core6Music\\Core6Music.Web\\wwwroot\\MP3\\b6192958-66b7-4afe-a4f5-31ae803b04b8alex-productions-freedom.mp3",

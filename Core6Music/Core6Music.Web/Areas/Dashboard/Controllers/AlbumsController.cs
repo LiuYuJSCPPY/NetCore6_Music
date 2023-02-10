@@ -28,7 +28,7 @@ namespace Core6Music.Web.Areas.Dashboard.Controllers
         {
             AllAlbumViewModels allAlbumViewModels = new AllAlbumViewModels()
             {
-                AllAlbum = await _album.GetAllAlbum(),
+                AllAlbum = await _album.GetAllAlbum(ArtistId),
                 ArtistId = ArtistId
             };
             return View(allAlbumViewModels);

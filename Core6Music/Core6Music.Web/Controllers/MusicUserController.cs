@@ -59,7 +59,7 @@ namespace Core6Music.Web.Controllers
             if (_SignInManager.IsSignedIn(User))
             {
                 IdentityUser sUser = await _userManager.GetUserAsync(User);
-                var AllFavoriteArtists = await _musicDateContext.FavoriteSongs.Where(x => x.MusicUserId == sUser.Id).Include(x => x.Song).ToListAsync();
+                var AllFavoriteArtists = await _musicDateContext.FavoriteSongs.Where(x => x.MusicUserId == sUser.Id).Include(x => x.Song).ThenInclude(x => x.Album).ToListAsync();
                 return View(AllFavoriteArtists);
             }
             return RedirectToAction("Index", "Music");
@@ -117,7 +117,7 @@ namespace Core6Music.Web.Controllers
 
         }
 
-        public async Task<IActionResult> CreatePlayList()
+        public async Task<JsonResult> CreatePlayList()
         {
             bool Result = false;
             if (_SignInManager.IsSignedIn(User))
@@ -143,7 +143,7 @@ namespace Core6Music.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> EditPlayList(int Id, [Bind("Name,Context")] MusicManifest musicManifest ,IFormFile formFile)
+        public async Task<JsonResult> EditPlayList(int Id, [Bind("Name,Context")] MusicManifest musicManifest ,IFormFile formFile)
         {
             bool Result = false;
             string FileName;
@@ -196,7 +196,7 @@ namespace Core6Music.Web.Controllers
                 return Json(new { Success = false });
             }
         }
-        public async Task<IActionResult> DeletePlayList(int Id)
+        public async Task<JsonResult> DeletePlayList(int Id)
         {
             bool Result = false;
             if (_SignInManager.IsSignedIn(User))
@@ -221,7 +221,7 @@ namespace Core6Music.Web.Controllers
             if (Result)
             {
                 _toastNotification.AddSuccessToastMessage("成功!");
-                return RedirectToAction("AllPlayList");
+                return Json(new { Success = true });
             }
             else
             {
@@ -231,7 +231,7 @@ namespace Core6Music.Web.Controllers
         }
 
 
-        public async Task<IActionResult> AddorDeleteSongPlayList(int MusicMainfestId,int SongId,string AlbumId)
+        public async Task<JsonResult> AddorDeleteSongPlayList(int MusicMainfestId,int SongId,string AlbumId)
         {
             var SongPlayList = await _musicDateContext.MusicManifestSongs.Include(x => x.MusicManifest).Where(x => x.MusicManifestId == MusicMainfestId).Where(x => x.SongId == SongId).FirstOrDefaultAsync();
             var PlayList = await _musicDateContext.MusicManifests.FirstOrDefaultAsync(x => x.Id == MusicMainfestId);
@@ -270,7 +270,7 @@ namespace Core6Music.Web.Controllers
         
 
         [HttpGet("Favorite/Album/{Id}")]
-        public async Task<IActionResult> AddorDeleteFavoriteAlbum(string Id)
+        public async Task<JsonResult> AddorDeleteFavoriteAlbum(string Id)
         {
             bool result = false;
             
@@ -309,7 +309,7 @@ namespace Core6Music.Web.Controllers
            
         }
         [HttpGet("Favorite/Artist/{Id}")]
-        public async Task<IActionResult> AddOrDeleteFavoriteArtist(string Id)
+        public async Task<JsonResult> AddOrDeleteFavoriteArtist(string Id)
         {
             bool result = false;
             
@@ -350,7 +350,7 @@ namespace Core6Music.Web.Controllers
            
         }
         [HttpGet("Favorite/Song/{Id}")]
-        public async Task<IActionResult> AddorDeleteFavoriteSong(int Id)
+        public async Task<JsonResult> AddorDeleteFavoriteSong(int Id)
         {
             bool result = false;
             

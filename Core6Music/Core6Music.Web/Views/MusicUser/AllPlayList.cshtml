@@ -5,9 +5,10 @@
 @using Microsoft.AspNetCore.Identity;
 
 @inject UserManager<MusicUser> UserManger
-@inject SignInManager<MusicUser> SignInManager;
+@inject SignInManager<MusicUser> SignInManager
 @{
-    string Path = "~Image/PlayList";
+    string Path = "~/Image/PlayList/";
+    var total =1;
 }
 <div class="row row-cols-1 row-cols-md-6 g-4">
     @foreach (var item in Model.musicManifests)
@@ -18,11 +19,9 @@
                 <div class="card-body">
                     @if (item.Name == null)
                     {
-                        var total = Model.musicManifests.Count();
-                        for (int i = 1; i < total + 1; i++)
-                        {
-                            <h5 class="card-title">我的播放清單 #@i</h5>
-                        }
+                       
+                       <h5 class="card-title">我的播放清單 #@(total++)</h5>
+                        
                     }
                     else
                     {
@@ -42,8 +41,9 @@
         <div class="card h-100">
             <img src="..." class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <h5 class="card-title">我喜歡的歌曲</h5>
+                 <p class="card-text"><small class="text-muted">共有 @Model.favoriteSongs.Count() 首</small></p>
+                <a asp-action="FavoriteSong" asp-controller="MusicUser" class="btn btn-primary">來去聆聽</a>
             </div>
         </div>
     </div>

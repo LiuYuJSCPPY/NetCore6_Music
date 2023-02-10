@@ -55,9 +55,9 @@ namespace Core6Music.Web.Repository
             return await _musicDateContext.Albums.AsNoTracking().Include(m => m.songs).FirstOrDefaultAsync(x => x.Id == Id);
         }
 
-        public async Task<IList<Album>> GetAllAlbum()
+        public async Task<IList<Album>> GetAllAlbum(string ArtistId)
         {
-            return await _musicDateContext.Albums.Include(x => x.Artist).Include(song => song.songs).ToListAsync();
+            return await _musicDateContext.Albums.Where(x => x.ArtistId == ArtistId).Include(x => x.Artist).Include(song => song.songs).ToListAsync();
         }
         public string SaveImage(IFormFile formFile)
         {
