@@ -14,12 +14,12 @@
 **後端:**
  1.  C#
  2.  ASP.NET Core6 MVC
- 3.  Entity Framework Core 6.0.13
+ 3.  Entity Framework Core => 6.0.13
  4.  Linq
- 5.  Hashids.net
- 6.  TagLibSharp
- 7.  NToastNotify
- 8.  ASP.NET Core6 Identity
+ 5.  Hashids.net => 1.6.1
+ 6.  TagLibSharp => 2.3.0
+ 7.  NToastNotify => 8.0.0
+ 8.  ASP.NET Core6 Identity => 6.0.13
 
 **資料庫:**
 1.  MSSQL
